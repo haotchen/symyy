@@ -75,7 +75,9 @@
 		<view class="schedule">
 			<uni-steps :options="[{title: '填写信息'}, {title: '提交信息'}, {title: '待确认'}]" :active="0"></uni-steps>
 		</view>
-
+		<uni-popup ref="popup" type="message">
+			<uni-popup-message type="error" message="请填写完整信息!" :duration="2000"></uni-popup-message>
+		</uni-popup>
 
 	</view>
 </template>
@@ -229,6 +231,7 @@
 				
 				if (flag) {
 					// TODO 消息提醒用户信息不完整
+					this.$refs.popup.open()
 					return
 				}
 			}
