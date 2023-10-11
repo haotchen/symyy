@@ -220,6 +220,7 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
@@ -230,8 +231,8 @@ var _default = {
       inputClearValue: '',
       changeValue: '',
       showPassword: true,
-      candidates: ['北京', '南京', '东京', '武汉', '天津', '上海', '海口'],
-      city: ''
+      candidates: ['美白', '去皱', '紧致', '提亮', '常规检测'],
+      serverType: ''
     };
   },
   methods: {

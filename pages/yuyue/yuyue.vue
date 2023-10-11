@@ -26,11 +26,12 @@
 
 				<view class="uni-form-item uni-column">
 					<view class="title"><text class="uni-form-item__title">服务:</text></view>
-					<view class="uni-input-wrapper">
-						<uni-combox :candidates="candidates" placeholder="选择服务类型,可搜索如: 美容" v-model="city"></uni-combox>
+					<view class="example-body">
+						<uni-combox :candidates="candidates" placeholder="选择服务类型,可搜索如: 美容"
+							v-model="serverType"></uni-combox>
 					</view>
 				</view>
-			
+
 
 				<!-- 时间选择器 -->
 			</form>
@@ -56,8 +57,8 @@
 				inputClearValue: '',
 				changeValue: '',
 				showPassword: true,
-				candidates: ['北京', '南京', '东京', '武汉', '天津', '上海', '海口'],
-				city: ''
+				candidates: ['美白', '去皱', '紧致', '提亮', '常规检测'],
+				serverType: ''
 			}
 		},
 		methods: {
@@ -115,14 +116,13 @@
 
 	.form-card {
 		margin-top: 20px;
-		height: 600rpx;
 	}
+
 	.form-data {
 		height: 100vh;
 	}
 
 	.example-body {
-		padding: 12px;
 		background-color: #FFFFFF;
 	}
 
@@ -130,5 +130,13 @@
 		text-align: center;
 		padding: 20px 0px;
 		font-size: 16px;
+	}
+
+	.uni-form-item {
+		padding-bottom: 10px;
+	}
+
+	.uni-form-item__title {
+		font-weight: 700;
 	}
 </style>

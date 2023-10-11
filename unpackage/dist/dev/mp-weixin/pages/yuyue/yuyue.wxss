@@ -16,18 +16,22 @@
 }
 .form-card.data-v-2aa79262 {
 	margin-top: 20px;
-	height: 600rpx;
 }
 .form-data.data-v-2aa79262 {
 	height: 100vh;
 }
 .example-body.data-v-2aa79262 {
-	padding: 12px;
 	background-color: #FFFFFF;
 }
 .result-box.data-v-2aa79262 {
 	text-align: center;
 	padding: 20px 0px;
 	font-size: 16px;
+}
+.uni-form-item.data-v-2aa79262 {
+	padding-bottom: 10px;
+}
+.uni-form-item__title.data-v-2aa79262 {
+	font-weight: 700;
 }
 
