@@ -9,6 +9,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "pages/myRecord/myRecord",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "pages/yuyue/yuyue",
           "query": "",
           "launchMode": "default",
