@@ -13,13 +13,15 @@
 .schedule.data-v-2aa79262 {
 	width: 600rpx;
 	margin-top: 80rpx;
+	height: 60px;
 	background-color: white;
 	position: fixed;
-	bottom: 20px;
+	bottom: 0px;
 }
 .form-card.data-v-2aa79262 {
 	width: 80%;
 	margin-top: 20px;
+	overflow-y: scroll;
 }
 .form-data.data-v-2aa79262 {
 	height: 100vh;
@@ -36,7 +38,7 @@
 .logo.data-v-2aa79262 {
 	width: 60px;
 	height: 80px;
-	position: fixed;
+	position: absolute;
 	top:70px;
 	right: 50px;
 }

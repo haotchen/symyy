@@ -58,15 +58,15 @@
 				<view style="width: 100%; height: 60px;">
 				</view>
 			</form>
-			
+			<view class="logo">
+				<image src="../../static/logo.png" alt="" mode="widthFix" style="width: 100%;"></image>
+			</view>
 		<!-- </uni-card> -->
 		</view>
 		<view class="schedule">
 			<uni-steps :options="[{title: '填写信息'}, {title: '提交信息'}, {title: '待确认'}]" :active="0"></uni-steps>
 		</view>
-		<view class="logo">
-			<image src="../../static/logo.png" alt="" mode="widthFix" style="width: 100%;"></image>
-		</view>
+		
 
 	</view>
 </template>
@@ -152,14 +152,16 @@
 	.schedule {
 		width: 600rpx;
 		margin-top: 80rpx;
+		height: 60px;
 		background-color: white;
 		position: fixed;
-		bottom: 20px;
+		bottom: 0px;
 	}
 
 	.form-card {
 		width: 80%;
 		margin-top: 20px;
+		overflow-y: scroll;
 	}
 
 	.form-data {
@@ -180,7 +182,7 @@
 	.logo {
 		width: 60px;
 		height: 80px;
-		position: fixed;
+		position: absolute;
 		top:70px;
 		right: 50px;
 	}
