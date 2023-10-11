@@ -148,10 +148,11 @@
 
 	.btn-yy {
 		position: fixed;
-		bottom: 5px;
-		right: 52px;
+		bottom: 2rpx;
+		left: 50%;
 		width: 200px;
 		background-color: #ffa84e;
+		transform: translate(-50%, -50%);
 	}
 
 	.bgi-title {
@@ -167,6 +168,6 @@
 		margin-top: 350rpx;
 		/* flex: auto; */
 		/* height: 100vh; */
-		padding-bottom: 100rpx;
+		padding-bottom: 150rpx;
 	}
 </style>
