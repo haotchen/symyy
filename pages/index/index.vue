@@ -5,7 +5,7 @@
 				:duration="duration">
 				<swiper-item v-for="(item,index) in background" :key="index">
 					<view class="swiper-item uni-bg-red">
-						<img :src="item" alt="">
+						<img :src="item" alt="" style="width: 100%;">
 					</view>s
 				</swiper-item>
 			</swiper>

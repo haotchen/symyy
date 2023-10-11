@@ -3,8 +3,8 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
-    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uni-combox": "/uni_modules/uni-combox/components/uni-combox/uni-combox",
+    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
     "uni-steps": "/uni_modules/uni-steps/components/uni-steps/uni-steps"
   }
 }
