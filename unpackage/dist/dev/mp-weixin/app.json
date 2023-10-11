@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/yuyue/yuyue"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "预约",
+    "navigationBarBackgroundColor": "#a8c1ff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}
