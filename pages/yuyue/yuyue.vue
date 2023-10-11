@@ -76,7 +76,7 @@
 			<uni-steps :options="[{title: '填写信息'}, {title: '提交信息'}, {title: '待确认'}]" :active="0"></uni-steps>
 		</view>
 		<uni-popup ref="popup" type="message">
-			<uni-popup-message type="error" message="请填写完整信息!" :duration="2000"></uni-popup-message>
+			<uni-popup-message :type="type" :message="message" :duration="2000"></uni-popup-message>
 		</uni-popup>
 
 	</view>
@@ -114,7 +114,9 @@
 					serverType: '',
 					startTime: '',
 					endTime: ''
-				}
+				},
+				type: 'success',
+				message: '预约信息已提交,请耐心等待确认! 即将返回首页'
 			}
 		},
 		mounted() {
@@ -148,7 +150,6 @@
 			},
 
 			'customer.serverType'(newValue, oldValue) {
-				console.log(newValue, '========');
 				if (newValue === '') {
 					this.check_data.serverType_is_null = true
 					return
@@ -158,7 +159,6 @@
 
 
 			'customer.startTime'(newValue, oldValue) {
-				console.log(newValue, '========');
 				if (newValue === '') {
 					this.check_data.startTime_is_null = true
 					return
@@ -166,7 +166,6 @@
 				this.check_data.startTime_is_null = false
 			},
 			'customer.endTime'(newValue, oldValue) {
-				console.log(newValue, '========');
 				if (newValue === '') {
 					this.check_data.endTime_is_null = true
 					return
@@ -175,42 +174,6 @@
 			},
 		},
 		methods: {
-			onKeyInput: function(event) {
-				this.inputValue = event.target.value
-			},
-			replaceInput: function(event) {
-				var value = event.target.value;
-				if (value === '11') {
-					this.changeValue = '2';
-				}
-			},
-			hideKeyboard: function(event) {
-				if (event.target.value === '123') {
-					uni.hideKeyboard();
-				}
-			},
-			clearInput: function(event) {
-				this.inputClearValue = event.detail.value;
-				if (event.detail.value.length > 0) {
-					this.showClearIcon = true;
-				} else {
-					this.showClearIcon = false;
-				}
-			},
-			clearIcon: function() {
-				this.inputClearValue = '';
-				this.showClearIcon = false;
-			},
-			changePassword: function() {
-				this.showPassword = !this.showPassword;
-			},
-			startChange(e) {
-				this.startTime = e.detail.value
-			},
-			endChange(e) {
-				this.endTime = e.detail.value
-			},
-			
 			sendForm(e) {
 				let flag = false;
 				if (this.check_data.name_is_null || this.customer.name === '') {
@@ -231,9 +194,18 @@
 				
 				if (flag) {
 					// TODO 消息提醒用户信息不完整
+					this.type = 'error';
+					this.message = '预约信息不完整,请重新填写提交! '
 					this.$refs.popup.open()
 					return
-				}
+				} 
+				// 提交表单信息
+				this.$refs.popup.open()
+				setTimeout(function (){
+					wx.navigateBack({
+						delta: 1
+					})
+				}, 1500);
 			}
 		}
 	}

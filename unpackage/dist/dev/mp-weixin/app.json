@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/yuyue/yuyue",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/myRecord/myRecord"
   ],
   "subPackages": [],
   "window": {
