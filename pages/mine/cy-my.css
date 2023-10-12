@@ -18,7 +18,7 @@
 	.uesr {
 		overflow: hidden;
 		padding: 0 30rpx;
-		background: url(../../static/cy-my/beijing1_03.png) no-repeat 0 center;
+		/* background: url(../../static/cy-my/beijing1_03.png) no-repeat 0 center; */
 
 		height: 345rpx;
 	}
@@ -49,7 +49,7 @@
 		line-height: 40rpx;
 		font-size: 20rpx;
 		width: 330rpx;
-		background: url(../../static/cy-my/jifen.png) no-repeat right center;
+/* 		background: url(../../static/cy-my/jifen.png) no-repeat right center; */
 		background-size: 100rpx;
 		color: rgb(68, 68, 68);
 	}

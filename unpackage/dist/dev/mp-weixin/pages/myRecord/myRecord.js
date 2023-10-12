@@ -184,7 +184,7 @@ var _default = {
       recordList: [{
         'title': '美白',
         'subTitle': '2023-10-09 10:53:11',
-        'extra': '额外信息',
+        'extra': '门店信息',
         'textValue': ''
       }]
     };

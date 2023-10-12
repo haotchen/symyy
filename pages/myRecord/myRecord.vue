@@ -5,7 +5,7 @@
 		</view>
 		<view class="card-list" v-for="(item,index) in recordList" :key="index">
 			<uni-card :title="item.title" :sub-title="item.subTitle" :extra="item.extra">
-				<text class="uni-body">{{item.textValue}}</text>
+				<text class="uni-body">{{item.textValue === '' ? '此次预约无备注信息' : item.textValue }}</text>
 			</uni-card>
 		</view>
 
@@ -19,7 +19,7 @@
 				recordList: [{
 					'title': '美白',
 					'subTitle': '2023-10-09 10:53:11',
-					'extra': '额外信息',
+					'extra': '门店信息',
 					'textValue': ''
 				}]
 			}

@@ -5,9 +5,7 @@
 				<view class="h2">
 					个人中心
 				</view>
-				<view class="pic">
-					<image src="../../static/cy-my/xiaoxi.png" style="width: 40rpx;" mode="widthFix"></image>
-				</view>
+				
 			</view>
 			<view class="fot-xh">
 				<navigator url="" hover-class="none">
@@ -28,51 +26,20 @@
 				</navigator>
 			</view>
 		</view>
-		<view class="about">
-			<view class="m-a1">
-				<navigator url="" hover-class="none">
-					<view class="pic">
-						<image src="../../static/cy-my/tianjia.png" style="width: 76rpx;" mode="widthFix"></image>
-					</view>
-					<view class="txt">
-						<text class="s1">点击此处添加宝宝</text>
-						<text>记录宝宝成长</text>
-					</view>
-				</navigator>
-			</view>
-		</view>
+		
 		<view class="ul-list1-xh">
-			<view class="li">
-				<navigator url="" hover-class="none">
-					<view class="pic">
-						<image src="../../static/cy-my/qianbao.png" style="width: 40rpx;" mode="widthFix"></image>
-					</view>
-					<view class="txt">
-						<text>我的钱包</text>
-					</view>
-				</navigator>
-			</view>
+			
 			<view class="li">
 				<navigator url="" hover-class="none">
 					<view class="pic">
 						<image src="../../static/cy-my/dingdan.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
 					<view class="txt">
-						<text>我的订单</text>
+						<text>预约记录</text>
 					</view>
 				</navigator>
 			</view>
-			<view class="li">
-				<navigator url="" hover-class="none">
-					<view class="pic">
-						<image src="../../static/cy-my/dizhi.png" style="width: 33rpx;  height:45rpx;" mode="widthFix">
-						</image>
-					</view>
-					<view class="txt">
-						<text>我的地址</text>
-					</view>
-				</navigator>
-			</view>
+			
 			<view class="li">
 				<navigator url="" hover-class="none">
 					<view class="pic">
