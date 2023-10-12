@@ -6,8 +6,12 @@
 			</view>
 			<form>
 				<view class="uni-textarea">
-					<textarea placeholder="点我填写!" />
+					<textarea placeholder="点我填写!" :maxlength="300" />
 				</view>
+				<view class="tishi">
+					当前输入文字数量: 
+				</view>
+				<button class="feedback-btn" type="primary">提交反馈</button>
 			</form>
 		</view>
 	</view>
@@ -39,6 +43,7 @@
 		height: 94vh;
 		border-radius: 10px;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		position: relative;
 	}
 
 	.feedback-title {
@@ -47,10 +52,28 @@
 		font-size: 1em;
 	}
 
-	.uni-textarea {
-		height: 80px;
-		width: 98%;
+	textarea {
+		height: 200px;
+		width: 92%;
 		margin-top: 20px;
 		background-color: #eaeaea;
+		text-align: left;
+		line-height: 25px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 5px;
+	}
+
+	.feedback-btn {
+		position: absolute;
+		bottom: 10px;
+		left: 20%;
+		width: 60%;
+	}
+	
+	.tishi {
+		font-size: 12px;
+		color: #cfced0;
 	}
 </style>

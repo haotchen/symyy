@@ -47,8 +47,8 @@
 .fot-xh .name::after {
 		content: '';
 		position: absolute;
-		border-top: 4rpx solid rgb(179, 179, 179);
-		border-left: 4rpx solid rgb(179, 179, 179);
+		/* border-top: 4rpx solid rgb(179, 179, 179);
+		border-left: 4rpx solid rgb(179, 179, 179); */
 		width: 14rpx;
 		height: 14rpx;
 		right: 5rpx;
