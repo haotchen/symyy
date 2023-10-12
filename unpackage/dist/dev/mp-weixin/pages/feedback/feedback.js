@@ -162,9 +162,16 @@ exports.default = void 0;
 //
 var _default = {
   data: function data() {
-    return {};
+    return {
+      textValue: ''
+    };
   },
-  methods: {}
+  methods: {},
+  computed: {
+    'textValueLength': function textValueLength() {
+      return this.textValue.length;
+    }
+  }
 };
 exports.default = _default;
 

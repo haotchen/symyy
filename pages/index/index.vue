@@ -17,7 +17,7 @@
 					<uni-card title="工作室历史" extra="前情回顾">
 						<img src="https://th.bing.com/th/id/OIP.ZkoPhpKfJwsvGmpm8RsragHaFp?pid=ImgDet&rs=1"
 							style="width: 100%; height: 160px;" alt="">
-						<text class="uni-body">这是一个基础卡片示例，此示例展示了一个标题加标题额外信息的标准卡片。</text>
+						<text class="uni-body"> {{this.studioInfo}}{{this.studioInfo.description}}</text>
 					</uni-card>
 				</uni-section>
 			</view>
@@ -38,7 +38,12 @@
 </template>
 
 <script>
-	import { toPath } from '@/service/index.js'
+	import {
+		toPath
+	} from '@/service/index.js'
+	import {
+		getStudioInfo
+	} from '@/api/index.js'
 	export default {
 		data() {
 			return {
@@ -55,11 +60,24 @@
 					color: '#4cd964',
 					size: '22',
 					type: 'gear-filled'
+				},
+				studioInfo: {
+					description: '',
+					imgs: []
 				}
 			}
 		},
 		onLoad() {
 
+		},
+		mounted() {
+			// 获取工作室信息
+			let that = this
+			let res = getStudioInfo()
+			res.then(function (res) {
+				that.studioInfo.description = res.data.data.description;
+				that.studioInfo.imgs = res.data.data.studioImg;
+			})
 		},
 		methods: {
 			changeIndicatorDots(e) {

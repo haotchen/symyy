@@ -165,6 +165,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _index = __webpack_require__(/*! @/service/index.js */ 40);
+var _index2 = __webpack_require__(/*! @/api/index.js */ 183);
 //
 //
 //
@@ -218,10 +219,23 @@ var _default = {
         color: '#4cd964',
         size: '22',
         type: 'gear-filled'
+      },
+      studioInfo: {
+        description: '',
+        imgs: []
       }
     };
   },
   onLoad: function onLoad() {},
+  mounted: function mounted() {
+    // 获取工作室信息
+    var that = this;
+    var res = (0, _index2.getStudioInfo)();
+    res.then(function (res) {
+      that.studioInfo.description = res.data.data.description;
+      that.studioInfo.imgs = res.data.data.studioImg;
+    });
+  },
   methods: {
     changeIndicatorDots: function changeIndicatorDots(e) {
       this.indicatorDots = !this.indicatorDots;

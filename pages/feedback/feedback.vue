@@ -6,10 +6,10 @@
 			</view>
 			<form>
 				<view class="uni-textarea">
-					<textarea placeholder="点我填写!" :maxlength="300" />
+					<textarea placeholder="点我填写!" :maxlength="300" v-model:value="textValue" />
 				</view>
 				<view class="tishi">
-					当前输入文字数量: 
+					当前输入文字数量: {{textValueLength}}
 				</view>
 				<button class="feedback-btn" type="primary">提交反馈</button>
 			</form>
@@ -21,11 +21,17 @@
 	export default {
 		data() {
 			return {
-
+				textValue: ''
+				
 			}
 		},
 		methods: {
 
+		},
+		computed: {
+			'textValueLength' () {
+				return this.textValue.length
+			}
 		}
 	}
 </script>
