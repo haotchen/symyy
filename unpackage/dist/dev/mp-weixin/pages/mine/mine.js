@@ -170,16 +170,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var _index = __webpack_require__(/*! @/service/index.js */ 164);
 //
 //
 //
@@ -253,7 +244,17 @@ var _default = {
     };
   },
   onLoad: function onLoad() {},
-  methods: {}
+  methods: {
+    toRecord: function toRecord() {
+      (0, _index.toPath)('/pages/myRecord/myRecord');
+    },
+    toFeedback: function toFeedback() {
+      (0, _index.toPath)('/pages/feedback/feedback');
+    },
+    toAbout: function toAbout() {
+      (0, _index.toPath)('/pages/about/about');
+    }
+  }
 };
 exports.default = _default;
 

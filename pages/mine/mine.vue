@@ -34,7 +34,7 @@
 					<view class="pic">
 						<image src="../../static/cy-my/dingdan.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toRecord">
 						<text>预约记录</text>
 					</view>
 				</navigator>
@@ -45,7 +45,7 @@
 					<view class="pic">
 						<image src="../../static/cy-my/yijian.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toFeedback">
 						<text>意见反馈</text>
 					</view>
 				</navigator>
@@ -55,18 +55,8 @@
 					<view class="pic">
 						<image src="../../static/cy-my/guanyhu.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toAbout">
 						<text>关于我们</text>
-					</view>
-				</navigator>
-			</view>
-			<view class="li">
-				<navigator url="" hover-class="none">
-					<view class="pic">
-						<image src="../../static/cy-my/shehzi.png" style="width: 35rpx;" mode="widthFix"></image>
-					</view>
-					<view class="txt" style="border-bottom: none;">
-						<text>设置</text>
 					</view>
 				</navigator>
 			</view>
@@ -75,6 +65,8 @@
 </template>
 
 <script>
+	import {toPath} from '@/service/index.js'
+	
 	export default {
 		data() {
 			return {
@@ -85,7 +77,15 @@
 
 		},
 		methods: {
-
+			toRecord() {
+				toPath('/pages/myRecord/myRecord')
+			},
+			toFeedback(){
+				toPath('/pages/feedback/feedback')
+			},
+			toAbout(){
+				toPath('/pages/about/about')
+			}
 		}
 	}
 </script>

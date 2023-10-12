@@ -38,6 +38,7 @@
 </template>
 
 <script>
+	import { toPath } from '@/service/index.js'
 	export default {
 		data() {
 			return {
@@ -83,9 +84,7 @@
 				})
 			},
 			toForm() {
-				wx.navigateTo({
-					url: '/pages/yuyue/yuyue'
-				})
+				toPath('/pages/yuyue/yuyue')
 			}
 		}
 	}

@@ -366,6 +366,32 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
+/***/ 164:
+/*!******************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/service/index.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(wx) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.toPath = void 0;
+// 跳转到指定路径
+var toPath = function toPath(path) {
+  wx.navigateTo({
+    // '/pages/yuyue/yuyue'
+    url: path
+  });
+};
+exports.toPath = toPath;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
+
+/***/ }),
+
 /***/ 17:
 /*!*************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/isNativeReflectConstruct.js ***!

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/yuyue/yuyue",
     "pages/mine/mine",
-    "pages/myRecord/myRecord"
+    "pages/myRecord/myRecord",
+    "pages/feedback/feedback",
+    "pages/about/about"
   ],
   "subPackages": [],
   "window": {
