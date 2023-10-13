@@ -351,6 +351,7 @@ var _default = {
               } else {
                 console.log('请求失败! ', serverTypeList.statusCode);
               }
+
               // console.log('123', this.candidates);
             case 7:
             case "end":
@@ -408,11 +409,12 @@ var _default = {
     sendForm: function sendForm(e) {
       var _this2 = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var flag, add;
+        var openid, flag, add;
         return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                openid = wx.getStorageSync('openid');
                 flag = false;
                 if (_this2.check_data.name_is_null || _this2.customer.userName === '') {
                   flag = true;
@@ -429,8 +431,9 @@ var _default = {
                 if (_this2.check_data.endTime_is_null || _this2.customer.reservationEndTime === '') {
                   flag = true;
                 }
+                _this2.customer.miniId = openid;
                 if (!flag) {
-                  _context2.next = 11;
+                  _context2.next = 13;
                   break;
                 }
                 // TODO 消息提醒用户信息不完整
@@ -438,12 +441,12 @@ var _default = {
                 _this2.message = '预约信息不完整,请重新填写提交! ';
                 _this2.$refs.popup.open();
                 return _context2.abrupt("return");
-              case 11:
+              case 13:
                 // 提交表单信息
                 console.log('提交预约信息', _this2.customer);
-                _context2.next = 14;
+                _context2.next = 16;
                 return (0, _index.addRecord)(_this2.customer);
-              case 14:
+              case 16:
                 add = _context2.sent;
                 if (add.statusCode === 200) {
                   console.log('请求成功! ', add.data);
@@ -461,7 +464,7 @@ var _default = {
                   _this2.message = '信息提交失败,请稍后重试! ';
                   _this2.$refs.popup.open();
                 }
-              case 16:
+              case 18:
               case "end":
                 return _context2.stop();
             }

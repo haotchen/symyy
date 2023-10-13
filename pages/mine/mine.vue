@@ -78,9 +78,8 @@
 
 		},
 		async mounted(){
-			const memberInfoRes = await getMemberInfo({
-				openId: '123123'
-			}) 
+			let openId = wx.getStorageSync('openid')
+			const memberInfoRes = await getMemberInfo({ openId }) 
 			// 请求成功
 			if (memberInfoRes.statusCode === 200) {
 				console.log('请求成功! ', memberInfoRes.data);

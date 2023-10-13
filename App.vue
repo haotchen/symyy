@@ -1,17 +1,12 @@
 <script>
+	import {openid} from '@/service/index.js'
+	
 	export default {
 		onLaunch: function() {
-			wx.login({
-				success: (res)=>{
-					console.log(res);
-					let code = res.code
-					wx.getSetting({
-						success (res) {
-							console.log(res);
-						}
-					})
-				}
-			})
+			if(!wx.getStorageSync('openid')){
+				// 执行获取openid存入缓存
+				openid()
+			}
 		},
 		onShow: function() {
 		},

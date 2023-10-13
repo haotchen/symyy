@@ -1,3 +1,5 @@
+import {getOpenId} from '@/api/index.js'
+
 // 跳转到指定路径
 export var toPath = function(path) {
 	wx.navigateTo({
@@ -16,9 +18,26 @@ export function toPost(requestUrl, data, headers) {
 	return sendReq(requestUrl, data, headers, 'POST');
 }
 
+export function openid() {
+	wx.login({
+			success: function(value) {
+				getOpenId({
+					code: value.code
+				}).then(function(res) {
+					// 得到openid放入缓存
+					wx.setStorageSync('openid', res.data.data)
+					console.log('获取OpenId成功', res.data);
+				}).catch(function(err) {
+					console.log('获取OpenId失败', err);
+				})
+			
+		}
+	});
+}
+
 
 async function sendReq(requestUrl, paramData, headers, method) {
-	
+
 	return await uni.request({
 		url: requestUrl,
 		data: paramData,

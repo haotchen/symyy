@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(wx) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -213,16 +213,17 @@ var _default = {
   mounted: function mounted() {
     var _this = this;
     return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-      var myRecordRes;
+      var openId, myRecordRes;
       return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
+              openId = wx.getStorageSync('openid');
+              _context.next = 3;
               return (0, _index.getMyRecord)({
-                memberId: 1
+                memberId: openId
               });
-            case 2:
+            case 3:
               myRecordRes = _context.sent;
               // 请求成功
               if (myRecordRes.statusCode === 200) {
@@ -231,7 +232,7 @@ var _default = {
               } else {
                 console.log('请求失败! ', myRecordRes.statusCode);
               }
-            case 4:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -242,6 +243,7 @@ var _default = {
   methods: {}
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
 

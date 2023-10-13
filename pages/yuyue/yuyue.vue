@@ -154,6 +154,7 @@
 			} else {
 				console.log('请求失败! ', serverTypeList.statusCode);
 			}
+			
 			// console.log('123', this.candidates);
 		},
 		watch: {
@@ -206,6 +207,7 @@
 		},
 		methods: {
 			async sendForm(e) {
+				let openid = wx.getStorageSync('openid')
 				let flag = false;
 				if (this.check_data.name_is_null || this.customer.userName === '') {
 					flag = true
@@ -222,7 +224,7 @@
 				if (this.check_data.endTime_is_null || this.customer.reservationEndTime === '') {
 					flag = true
 				}
-
+				this.customer.miniId = openid
 				if (flag) {
 					// TODO 消息提醒用户信息不完整
 					this.type = 'error';

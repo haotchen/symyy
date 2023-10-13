@@ -98,22 +98,7 @@
 			} else {
 				console.log('请求失败! ', indexImgs.statusCode);
 			}
-			let loginRes = wx.login({
-				success: function(res) {
-					if (res.code) {
-						// 获取到用户临时登录凭证code
-						this.wxCode = res.code;
-						 let that = this
-						getOpenId({code: this.wxCode}).then(function(res) {
-							that.openId = res.data
-							console.log('获取OpenId成功',that.openId);
-						})
-						// 可以将code发送到后台服务器进行处理
-					} else {
-						console.log('登录失败：' + res.errMsg);
-					}
-				}
-			});
+			
 
 		},
 		methods: {

@@ -10360,11 +10360,13 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.openid = openid;
 exports.toGet = toGet;
 exports.toPath = void 0;
 exports.toPost = toPost;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 35));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 37));
+var _index = __webpack_require__(/*! @/api/index.js */ 33);
 // 跳转到指定路径
 var toPath = function toPath(path) {
   wx.navigateTo({
@@ -10379,6 +10381,21 @@ function toGet(requestUrl, paramData, headers) {
 function toPost(requestUrl, data, headers) {
   console.log(requestUrl);
   return sendReq(requestUrl, data, headers, 'POST');
+}
+function openid() {
+  wx.login({
+    success: function success(value) {
+      (0, _index.getOpenId)({
+        code: value.code
+      }).then(function (res) {
+        // 得到openid放入缓存
+        wx.setStorageSync('openid', res.data.data);
+        console.log('获取OpenId成功', res.data);
+      }).catch(function (err) {
+        console.log('获取OpenId失败', err);
+      });
+    }
+  });
 }
 function sendReq(_x, _x2, _x3, _x4) {
   return _sendReq.apply(this, arguments);

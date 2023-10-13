@@ -25,8 +25,9 @@
 			}
 		},
 		async mounted() {
+			let openId = wx.getStorageSync('openid')
 			const myRecordRes = await getMyRecord({
-				memberId: 1
+				memberId: openId
 			});
 			// 请求成功
 			if (myRecordRes.statusCode === 200) {

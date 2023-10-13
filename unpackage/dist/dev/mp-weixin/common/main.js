@@ -14,7 +14,6 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/inte
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
-var _index = __webpack_require__(/*! @/api/index.js */ 33);
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
 __webpack_require__(/*! ./uni.promisify.adaptor */ 38);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -99,19 +98,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _index = __webpack_require__(/*! @/service/index.js */ 34);
 var _default = {
   onLaunch: function onLaunch() {
-    wx.login({
-      success: function success(res) {
-        console.log(res);
-        var code = res.code;
-        wx.getSetting({
-          success: function success(res) {
-            console.log(res);
-          }
-        });
-      }
-    });
+    if (!wx.getStorageSync('openid')) {
+      // 执行获取openid存入缓存
+      (0, _index.openid)();
+    }
   },
   onShow: function onShow() {},
   onHide: function onHide() {}
