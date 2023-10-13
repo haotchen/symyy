@@ -4,8 +4,10 @@
 			我的预约记录
 		</view>
 		<view class="card-list" v-for="(item,index) in recordList" :key="index">
-			<uni-card :title="item.title" :sub-title="item.subTitle" :extra="item.extra">
-				<text class="uni-body">{{item.textValue === '' ? '此次预约无备注信息' : item.textValue }}</text>
+			<uni-card :title="item.typeName"
+				:sub-title="'提交时间: \\n' + item.createTime.replace('T',' ') + '\\n' + '预约时间段: \\n' + item.reservationStartTime.replace('T',' ') + ' - ' + item.reservationEndTime.replace('T',' ')"
+				:extra="item.extra">
+				<text class="uni-body">{{item.notes === '' ? '此次预约无备注信息' : item.notes }}</text>
 			</uni-card>
 		</view>
 
@@ -13,16 +15,29 @@
 </template>
 
 <script>
+	import {
+		getMyRecord
+	} from '@/api/index.js'
 	export default {
 		data() {
 			return {
-				recordList: [{
-					'title': '美白',
-					'subTitle': '2023-10-09 10:53:11',
-					'extra': '门店信息',
-					'textValue': ''
-				}]
+				recordList: []
 			}
+		},
+		async mounted() {
+			const myRecordRes = await getMyRecord({
+				memberId: 1
+			});
+			// 请求成功
+			if (myRecordRes.statusCode === 200) {
+				console.log('请求成功! ', myRecordRes.data);
+				this.recordList = myRecordRes.data.data;
+			} else {
+				console.log('请求失败! ', myRecordRes.statusCode);
+			}
+
+
+
 		},
 		methods: {
 

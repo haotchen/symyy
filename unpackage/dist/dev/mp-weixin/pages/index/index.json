@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "预约",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card"
+  }
+}

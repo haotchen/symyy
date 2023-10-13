@@ -1,0 +1,16 @@
+
+.record-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.my-record-title {
+	font-weight: 900;
+	margin-top: 20px;
+}
+.card-list {
+	width: 100%;
+}
+

@@ -16,7 +16,10 @@
 					<view class="txt">
 						<view class="name">
 							<view class="h3">
-								用户昵称
+								{{memberInfo.memberName}}
+							</view>
+							<view class="phone">
+								{{memberInfo.memberPhone}}
 							</view>
 						</view>
 					</view>
@@ -31,7 +34,7 @@
 					<view class="pic">
 						<image src="../../static/cy-my/dingdan.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toRecord">
 						<text>预约记录</text>
 					</view>
 				</navigator>
@@ -42,7 +45,7 @@
 					<view class="pic">
 						<image src="../../static/cy-my/yijian.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toFeedback">
 						<text>意见反馈</text>
 					</view>
 				</navigator>
@@ -52,37 +55,52 @@
 					<view class="pic">
 						<image src="../../static/cy-my/guanyhu.png" style="width: 35rpx;" mode="widthFix"></image>
 					</view>
-					<view class="txt">
+					<view class="txt" @click="toAbout">
 						<text>关于我们</text>
 					</view>
 				</navigator>
 			</view>
-			<!-- <view class="li">
-				<navigator url="" hover-class="none">
-					<view class="pic">
-						<image src="../../static/cy-my/shehzi.png" style="width: 35rpx;" mode="widthFix"></image>
-					</view>
-					<view class="txt" style="border-bottom: none;">
-						<text>设置</text>
-					</view>
-				</navigator>
-			</view> -->
 		</view>
 	</view>
 </template>
 
 <script>
+	import {toPath} from '@/service/index.js'
+	import {getMemberInfo} from '@/api/index.js'
+	
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				memberInfo: ''
 			}
 		},
 		onLoad() {
 
 		},
+		async mounted(){
+			const memberInfoRes = await getMemberInfo({
+				openId: '123123'
+			}) 
+			// 请求成功
+			if (memberInfoRes.statusCode === 200) {
+				console.log('请求成功! ', memberInfoRes.data);
+				this.memberInfo = memberInfoRes.data.data;
+			
+			} else {
+				console.log('请求失败! ', memberInfoRes.statusCode);
+			}
+			
+		},
 		methods: {
-
+			toRecord() {
+				toPath('/pages/myRecord/myRecord')
+			},
+			toFeedback(){
+				toPath('/pages/feedback/feedback')
+			},
+			toAbout(){
+				toPath('/pages/about/about')
+			}
 		}
 	}
 </script>

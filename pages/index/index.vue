@@ -5,7 +5,7 @@
 				:duration="duration">
 				<swiper-item v-for="(item,index) in background" :key="index">
 					<view class="swiper-item uni-bg-red">
-						<img :src="item" alt="" style="width: 100%;">
+						<img :src="item.url" alt="" style="width: 100%;">
 					</view>s
 				</swiper-item>
 			</swiper>
@@ -15,9 +15,8 @@
 			<view>
 				<uni-section title="卡片标题+额外信息" type="line">
 					<uni-card title="工作室历史" extra="前情回顾">
-						<img src="https://th.bing.com/th/id/OIP.ZkoPhpKfJwsvGmpm8RsragHaFp?pid=ImgDet&rs=1"
-							style="width: 100%; height: 160px;" alt="">
-						<text class="uni-body">这是一个基础卡片示例，此示例展示了一个标题加标题额外信息的标准卡片。</text>
+						<img :src="studioInfo.studioImg[1].url" style="width: 100%; height: 160px;" alt="">
+						<text class="uni-body"> {{studioInfo.description}}</text>
 					</uni-card>
 				</uni-section>
 			</view>
@@ -25,9 +24,8 @@
 			<view>
 				<uni-section title="卡片标题+额外信息" type="line">
 					<uni-card title="医生工作史" extra="前情回顾">
-						<img src="https://th.bing.com/th/id/OIP.ZkoPhpKfJwsvGmpm8RsragHaFp?pid=ImgDet&rs=1"
-							style="width: 100%; height: 160px;" alt="">
-						<text class="uni-body">这是一个基础卡片示例，此示例展示了一个标题加标题额外信息的标准卡片。</text>
+						<img :src="studioInfo.studioImg[0].url" style="width: 100%; height: 160px;" alt="">
+						<text class="uni-body">{{doctorInfoText}}</text>
 					</uni-card>
 				</uni-section>
 			</view>
@@ -38,12 +36,19 @@
 </template>
 
 <script>
+	import {
+		toPath
+	} from '@/service/index.js'
+	import {
+		getStudioInfo,
+		getDoctorInfo,
+		getIndexImgs,
+		getOpenId
+	} from '@/api/index.js'
 	export default {
 		data() {
 			return {
-				background: ['https://th.bing.com/th/id/OIP.ZkoPhpKfJwsvGmpm8RsragHaFp?pid=ImgDet&rs=1',
-					'https://th.bing.com/th/id/R.b0ea268fa1be279d112489ce83ad4696?rik=qItsh%2fBiy33hlg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140303%2f1-140303215009.jpg&ehk=S6PLWamt%2bMzQV8uO9ugcU5d5M19BpXtCpNz2cRJ7q9M%3d&risl=&pid=ImgRaw&r=0'
-				],
+				background: [],
 				indicatorDots: false,
 				autoplay: true,
 				interval: 2000,
@@ -54,10 +59,61 @@
 					color: '#4cd964',
 					size: '22',
 					type: 'gear-filled'
-				}
+				},
+				studioInfo: '',
+				doctorInfo: '',
+				wxCode: '',
+				openId: ''
 			}
 		},
 		onLoad() {
+
+		},
+		async mounted() {
+			const studioInfoRes = await getStudioInfo();
+			// 请求成功
+			if (studioInfoRes.statusCode === 200) {
+				this.studioInfo = studioInfoRes.data.data;
+
+			} else {
+				console.log('请求失败! ', studioInfoRes.statusCode);
+			}
+
+			const doctorInfoRes = await getDoctorInfo();
+
+			// 请求成功
+			if (doctorInfoRes.statusCode === 200) {
+				this.doctorInfo = doctorInfoRes.data.data;
+
+			} else {
+				console.log('请求失败! ', doctorInfoRes.statusCode);
+			}
+
+			const indexImgs = await getIndexImgs();
+
+			// 请求成功
+			if (indexImgs.statusCode === 200) {
+				this.background = indexImgs.data.data;
+
+			} else {
+				console.log('请求失败! ', indexImgs.statusCode);
+			}
+			let loginRes = wx.login({
+				success: function(res) {
+					if (res.code) {
+						// 获取到用户临时登录凭证code
+						this.wxCode = res.code;
+						 let that = this
+						getOpenId({code: this.wxCode}).then(function(res) {
+							that.openId = res.data
+							console.log('获取OpenId成功',that.openId);
+						})
+						// 可以将code发送到后台服务器进行处理
+					} else {
+						console.log('登录失败：' + res.errMsg);
+					}
+				}
+			});
 
 		},
 		methods: {
@@ -83,9 +139,17 @@
 				})
 			},
 			toForm() {
-				wx.navigateTo({
-					url: '/pages/yuyue/yuyue'
-				})
+				toPath('/pages/yuyue/yuyue')
+			}
+		},
+		computed: {
+			doctorInfoText() {
+				return `
+				医生姓名: ${this.doctorInfo.doctorName}
+				医生年龄: ${this.doctorInfo.doctorAge}
+				联系方式: ${this.doctorInfo.doctorPhone}
+				医生简介: ${this.doctorInfo.description}
+				`
 			}
 		}
 	}
