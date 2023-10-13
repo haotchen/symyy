@@ -4,9 +4,10 @@ import {
 } from '@/service/index.js'
 
 const baseUrlDev = 'https://localhost:11000'
-const baseUrlPublic = 'https://www.haotchen.top:11000'
+// const baseUrlPublic = 'https://www.haotchen.top:11000'
+const baseUrlPublic = 'https://192.168.1.181:11000'
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-let flag = 'dev';
+let flag = 'public';
 
 var getBaseUrl = function(uri){
 	if (flag === 'dev') {

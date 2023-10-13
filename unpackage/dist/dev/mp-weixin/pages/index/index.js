@@ -158,7 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(wx, uni) {
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -231,7 +231,7 @@ var _default = {
   mounted: function mounted() {
     var _this = this;
     return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-      var studioInfoRes, doctorInfoRes, indexImgs, loginRes;
+      var studioInfoRes, doctorInfoRes, indexImgs;
       return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -266,25 +266,7 @@ var _default = {
               } else {
                 console.log('请求失败! ', indexImgs.statusCode);
               }
-              loginRes = wx.login({
-                success: function success(res) {
-                  if (res.code) {
-                    // 获取到用户临时登录凭证code
-                    this.wxCode = res.code;
-                    var that = this;
-                    (0, _index2.getOpenId)({
-                      code: this.wxCode
-                    }).then(function (res) {
-                      that.openId = res.data;
-                      console.log('获取OpenId成功', that.openId);
-                    });
-                    // 可以将code发送到后台服务器进行处理
-                  } else {
-                    console.log('登录失败：' + res.errMsg);
-                  }
-                }
-              });
-            case 13:
+            case 12:
             case "end":
               return _context.stop();
           }
@@ -325,7 +307,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

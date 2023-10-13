@@ -10284,9 +10284,10 @@ exports.getServerType = getServerType;
 exports.getStudioInfo = getStudioInfo;
 var _index = __webpack_require__(/*! @/service/index.js */ 34);
 var baseUrlDev = 'https://localhost:11000';
-var baseUrlPublic = 'https://www.haotchen.top:11000';
+// const baseUrlPublic = 'https://www.haotchen.top:11000'
+var baseUrlPublic = 'https://192.168.1.181:11000';
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-var flag = 'dev';
+var flag = 'public';
 var getBaseUrl = function getBaseUrl(uri) {
   if (flag === 'dev') {
     return baseUrlDev + uri;
@@ -10348,63 +10349,9 @@ function addFeedBack(data) {
   !*** /Users/chenhaotian/code/symyy/service/index.js ***!
   \******************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(wx, uni) {
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.toGet = toGet;
-exports.toPath = void 0;
-exports.toPost = toPost;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 35));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 37));
-// 跳转到指定路径
-var toPath = function toPath(path) {
-  wx.navigateTo({
-    url: path
-  });
-};
-exports.toPath = toPath;
-function toGet(requestUrl, paramData, headers) {
-  console.log(requestUrl);
-  return sendReq(requestUrl, paramData, headers, 'GET');
-}
-function toPost(requestUrl, data, headers) {
-  console.log(requestUrl);
-  return sendReq(requestUrl, data, headers, 'POST');
-}
-function sendReq(_x, _x2, _x3, _x4) {
-  return _sendReq.apply(this, arguments);
-}
-function _sendReq() {
-  _sendReq = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(requestUrl, paramData, headers, method) {
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return uni.request({
-              url: requestUrl,
-              data: paramData,
-              method: method,
-              header: headers
-            });
-          case 2:
-            return _context.abrupt("return", _context.sent);
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return _sendReq.apply(this, arguments);
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/chenhaotian/code/symyy/service/index.js: Unexpected token, expected \"{\" (27:26)\n\n  25 | \t\t\t\t\t// 得到openid放入缓存\n  26 | \t\t\t\t\tconsole.log('获取OpenId成功', res.data);\n> 27 | \t\t\t\t}).catch(function(err)) {\n     | \t\t\t\t                      ^\n  28 | \t\t\t\t\tconsole.log('获取OpenId失败', err);\n  29 | \t\t\t\t}\n  30 | \t\t\t} else {\n    at instantiate (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:67:32)\n    at constructor (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:364:12)\n    at JSXParserMixin.raise (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:3365:19)\n    at JSXParserMixin.unexpected (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:3398:16)\n    at JSXParserMixin.expect (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:3761:28)\n    at JSXParserMixin.parseBlock (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13534:10)\n    at JSXParserMixin.parseFunctionBody (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12287:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12271:10)\n    at /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13701:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12617:14)\n    at JSXParserMixin.parseFunction (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13700:10)\n    at JSXParserMixin.parseFunctionOrFunctionSent (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11713:17)\n    at JSXParserMixin.parseExprAtom (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11467:21)\n    at JSXParserMixin.parseExprAtom (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:7239:20)\n    at JSXParserMixin.parseExprSubscripts (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11171:23)\n    at JSXParserMixin.parseUpdate (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11153:21)\n    at JSXParserMixin.parseMaybeUnary (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11127:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10956:61)\n    at JSXParserMixin.parseExprOps (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10962:23)\n    at JSXParserMixin.parseMaybeConditional (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10937:23)\n    at JSXParserMixin.parseMaybeAssign (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10895:21)\n    at /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10863:39\n    at JSXParserMixin.allowInAnd (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12640:12)\n    at JSXParserMixin.parseMaybeAssignAllowIn (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10863:17)\n    at JSXParserMixin.parseExprListItem (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12380:18)\n    at JSXParserMixin.parseCallExpressionArguments (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11367:22)\n    at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11279:29)\n    at JSXParserMixin.parseSubscript (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11210:19)\n    at JSXParserMixin.parseSubscripts (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11184:19)\n    at JSXParserMixin.parseExprSubscripts (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11175:17)\n    at JSXParserMixin.parseUpdate (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11153:21)\n    at JSXParserMixin.parseMaybeUnary (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:11127:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10956:61)\n    at JSXParserMixin.parseExprOps (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10962:23)\n    at JSXParserMixin.parseMaybeConditional (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10937:23)\n    at JSXParserMixin.parseMaybeAssign (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10895:21)\n    at JSXParserMixin.parseExpressionBase (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10845:23)\n    at /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10840:39\n    at JSXParserMixin.allowInAnd (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12635:16)\n    at JSXParserMixin.parseExpression (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:10840:17)\n    at JSXParserMixin.parseStatementContent (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13096:23)\n    at JSXParserMixin.parseStatementLike (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12952:17)\n    at JSXParserMixin.parseStatementListItem (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12937:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13558:61)\n    at JSXParserMixin.parseBlockBody (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13550:10)\n    at JSXParserMixin.parseBlock (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13538:10)\n    at JSXParserMixin.parseFunctionBody (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12287:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12271:10)\n    at /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:13701:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (/Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/@babel/parser/lib/index.js:12617:14)");
 
 /***/ }),
 

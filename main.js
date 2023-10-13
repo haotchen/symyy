@@ -1,5 +1,5 @@
 import App from './App'
-import {getStudioInfo} from '@/api/index.js'
+import {openid} from '@/service/index.js'
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -11,6 +11,11 @@ const app = new Vue({
 })
 app.$mount()
 // #endif
+
+// 执行获取openid存入缓存
+openid()
+
+
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
 export function createApp() {
