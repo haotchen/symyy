@@ -18,9 +18,6 @@
 							<view class="h3">
 								用户昵称
 							</view>
-							<view class="phone">
-								178****6589
-							</view>
 						</view>
 					</view>
 				</navigator>
@@ -60,7 +57,7 @@
 					</view>
 				</navigator>
 			</view>
-			<view class="li">
+			<!-- <view class="li">
 				<navigator url="" hover-class="none">
 					<view class="pic">
 						<image src="../../static/cy-my/shehzi.png" style="width: 35rpx;" mode="widthFix"></image>
@@ -69,7 +66,7 @@
 						<text>设置</text>
 					</view>
 				</navigator>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </template>

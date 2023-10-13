@@ -1,13 +1,21 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
+			wx.login({
+				success: (res)=>{
+					console.log(res);
+					let code = res.code
+					wx.getSetting({
+						success (res) {
+							console.log(res);
+						}
+					})
+				}
+			})
 		},
 		onShow: function() {
-			console.log('App Show')
 		},
 		onHide: function() {
-			console.log('App Hide')
 		}
 	}
 </script>
