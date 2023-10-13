@@ -3,8 +3,8 @@
   "projectname": "symyy",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": true,
-    "autoAudits": true
+    "urlCheck": false,
+    "autoAudits": false
   },
   "condition": {
     "miniprogram": {

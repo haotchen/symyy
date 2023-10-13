@@ -158,7 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+/* WEBPACK VAR INJECTION */(function(wx, uni) {
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
@@ -169,7 +169,6 @@ var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 37));
 var _index = __webpack_require__(/*! @/service/index.js */ 34);
 var _index2 = __webpack_require__(/*! @/api/index.js */ 33);
-//
 //
 //
 //
@@ -223,14 +222,16 @@ var _default = {
         type: 'gear-filled'
       },
       studioInfo: '',
-      doctorInfo: ''
+      doctorInfo: '',
+      wxCode: '',
+      openId: ''
     };
   },
   onLoad: function onLoad() {},
   mounted: function mounted() {
     var _this = this;
     return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-      var studioInfoRes, doctorInfoRes, indexImgs;
+      var studioInfoRes, doctorInfoRes, indexImgs, loginRes;
       return _regenerator.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -241,7 +242,6 @@ var _default = {
               studioInfoRes = _context.sent;
               // 请求成功
               if (studioInfoRes.statusCode === 200) {
-                console.log('请求成功! ', studioInfoRes.data);
                 _this.studioInfo = studioInfoRes.data.data;
               } else {
                 console.log('请求失败! ', studioInfoRes.statusCode);
@@ -252,7 +252,6 @@ var _default = {
               doctorInfoRes = _context.sent;
               // 请求成功
               if (doctorInfoRes.statusCode === 200) {
-                console.log('请求成功! ', doctorInfoRes.data);
                 _this.doctorInfo = doctorInfoRes.data.data;
               } else {
                 console.log('请求失败! ', doctorInfoRes.statusCode);
@@ -263,12 +262,29 @@ var _default = {
               indexImgs = _context.sent;
               // 请求成功
               if (indexImgs.statusCode === 200) {
-                console.log('请求成功! ', indexImgs.data);
                 _this.background = indexImgs.data.data;
               } else {
                 console.log('请求失败! ', indexImgs.statusCode);
               }
-            case 12:
+              loginRes = wx.login({
+                success: function success(res) {
+                  if (res.code) {
+                    // 获取到用户临时登录凭证code
+                    this.wxCode = res.code;
+                    var that = this;
+                    (0, _index2.getOpenId)({
+                      code: this.wxCode
+                    }).then(function (res) {
+                      that.openId = res.data;
+                      console.log('获取OpenId成功', that.openId);
+                    });
+                    // 可以将code发送到后台服务器进行处理
+                  } else {
+                    console.log('登录失败：' + res.errMsg);
+                  }
+                }
+              });
+            case 13:
             case "end":
               return _context.stop();
           }
@@ -309,7 +325,7 @@ var _default = {
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

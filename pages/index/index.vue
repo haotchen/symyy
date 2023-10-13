@@ -24,8 +24,7 @@
 			<view>
 				<uni-section title="卡片标题+额外信息" type="line">
 					<uni-card title="医生工作史" extra="前情回顾">
-						<img :src="studioInfo.studioImg[0].url"
-							style="width: 100%; height: 160px;" alt="">
+						<img :src="studioInfo.studioImg[0].url" style="width: 100%; height: 160px;" alt="">
 						<text class="uni-body">{{doctorInfoText}}</text>
 					</uni-card>
 				</uni-section>
@@ -43,7 +42,8 @@
 	import {
 		getStudioInfo,
 		getDoctorInfo,
-		getIndexImgs
+		getIndexImgs,
+		getOpenId
 	} from '@/api/index.js'
 	export default {
 		data() {
@@ -61,7 +61,9 @@
 					type: 'gear-filled'
 				},
 				studioInfo: '',
-				doctorInfo: ''
+				doctorInfo: '',
+				wxCode: '',
+				openId: ''
 			}
 		},
 		onLoad() {
@@ -71,7 +73,6 @@
 			const studioInfoRes = await getStudioInfo();
 			// 请求成功
 			if (studioInfoRes.statusCode === 200) {
-				console.log('请求成功! ', studioInfoRes.data);
 				this.studioInfo = studioInfoRes.data.data;
 
 			} else {
@@ -82,7 +83,6 @@
 
 			// 请求成功
 			if (doctorInfoRes.statusCode === 200) {
-				console.log('请求成功! ', doctorInfoRes.data);
 				this.doctorInfo = doctorInfoRes.data.data;
 
 			} else {
@@ -93,12 +93,28 @@
 
 			// 请求成功
 			if (indexImgs.statusCode === 200) {
-				console.log('请求成功! ', indexImgs.data);
 				this.background = indexImgs.data.data;
 
 			} else {
 				console.log('请求失败! ', indexImgs.statusCode);
 			}
+			let loginRes = wx.login({
+				success: function(res) {
+					if (res.code) {
+						// 获取到用户临时登录凭证code
+						this.wxCode = res.code;
+						 let that = this
+						getOpenId({code: this.wxCode}).then(function(res) {
+							that.openId = res.data
+							console.log('获取OpenId成功',that.openId);
+						})
+						// 可以将code发送到后台服务器进行处理
+					} else {
+						console.log('登录失败：' + res.errMsg);
+					}
+				}
+			});
+
 		},
 		methods: {
 			changeIndicatorDots(e) {
@@ -127,7 +143,7 @@
 			}
 		},
 		computed: {
-			doctorInfoText () {
+			doctorInfoText() {
 				return `
 				医生姓名: ${this.doctorInfo.doctorName}
 				医生年龄: ${this.doctorInfo.doctorAge}

@@ -10279,13 +10279,14 @@ exports.getDoctorInfo = getDoctorInfo;
 exports.getIndexImgs = getIndexImgs;
 exports.getMemberInfo = getMemberInfo;
 exports.getMyRecord = getMyRecord;
+exports.getOpenId = getOpenId;
 exports.getServerType = getServerType;
 exports.getStudioInfo = getStudioInfo;
 var _index = __webpack_require__(/*! @/service/index.js */ 34);
-var baseUrlDev = 'http://localhost:11000';
+var baseUrlDev = 'https://localhost:11000';
 var baseUrlPublic = 'https://www.haotchen.top:11000';
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-var flag = 'public';
+var flag = 'dev';
 var getBaseUrl = function getBaseUrl(uri) {
   if (flag === 'dev') {
     return baseUrlDev + uri;
@@ -10306,6 +10307,10 @@ function getDoctorInfo() {
 // 获取服务类别信息
 function getServerType() {
   return (0, _index.toGet)(getBaseUrl('/serverType/list'), null, null);
+}
+// 获取OpenId
+function getOpenId(data) {
+  return (0, _index.toGet)(getBaseUrl('/members/open'), data, null);
 }
 // 新增预约
 function addRecord(data) {

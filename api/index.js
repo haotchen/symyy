@@ -3,10 +3,10 @@ import {
 	toPost
 } from '@/service/index.js'
 
-const baseUrlDev = 'http://localhost:11000'
+const baseUrlDev = 'https://localhost:11000'
 const baseUrlPublic = 'https://www.haotchen.top:11000'
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-let flag = 'public';
+let flag = 'dev';
 
 var getBaseUrl = function(uri){
 	if (flag === 'dev') {
@@ -29,6 +29,10 @@ export function getDoctorInfo() {
 // 获取服务类别信息
 export function getServerType() {
 	return toGet(getBaseUrl('/serverType/list'), null, null)
+}
+// 获取OpenId
+export function getOpenId(data) {
+	return toGet(getBaseUrl('/members/open'), data, null)
 }
 // 新增预约
 export function addRecord(data) {
