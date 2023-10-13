@@ -11,7 +11,7 @@
 				<view class="uni-form-item uni-column">
 					<view class="title"><text class="uni-form-item__title">姓名:</text></view>
 					<view class="uni-input-wrapper">
-						<input class="uni-input" placeholder="填写姓名" v-model:value="customer.name" />
+						<input class="uni-input" placeholder="填写姓名" v-model:value="customer.userName" />
 						<view v-if="check_data.name_is_null" class="check_text">{{ errMsg.nameNull }}</view>
 					</view>
 				</view>
@@ -19,7 +19,7 @@
 				<view class="uni-form-item uni-column">
 					<view class="title"><text class="uni-form-item__title">电话:</text></view>
 					<view class="uni-input-wrapper">
-						<input class="uni-input" placeholder="填写电话" v-model:value="customer.phone" />
+						<input class="uni-input" placeholder="填写电话" v-model:value="customer.userPhone" />
 						<view v-if="check_data.phone_is_null" class="check_text">{{ errMsg.phoneError }}</view>
 					</view>
 				</view>
@@ -28,7 +28,7 @@
 					<view class="title"><text class="uni-form-item__title">服务:</text></view>
 					<view class="example-body">
 						<uni-combox :candidates="candidates" placeholder="选择服务类型,可搜索如: 美容"
-							v-model="customer.serverType"></uni-combox>
+							v-model="customer.typeName"></uni-combox>
 						<view v-if="check_data.serverType_is_null" class="check_text">{{ errMsg.serverTypeError }}
 						</view>
 					</view>
@@ -40,7 +40,7 @@
 					<view class="title"><text class="uni-form-item__title">预约开始时间:</text></view>
 					<view class="example-body">
 						<uni-datetime-picker type="datetime" hide-second :start="start" :end="end"
-							v-model:value="customer.startTime" />
+							v-model:value="customer.reservationStartTime" />
 						<view v-if="check_data.startTime_is_null" class="check_text">{{ errMsg.timeError }}
 						</view>
 
@@ -50,7 +50,7 @@
 					<view class="title"><text class="uni-form-item__title">预约结束时间:</text></view>
 					<view class="example-body">
 						<uni-datetime-picker type="datetime" hide-second :start="start" :end="end"
-							v-model:value="customer.endTime" />
+							v-model:value="customer.reservationEndTime" />
 						<view v-if="check_data.endTime_is_null" class="check_text">{{ errMsg.timeError }}
 						</view>
 					</view>
@@ -58,8 +58,25 @@
 				<view class="uni-form-item uni-column">
 					<view class="title"><text class="uni-form-item__title">备注:</text></view>
 					<view class="uni-textarea" style="border: 1rpx solid #ddd;">
-						<textarea @blur="bindTextAreaBlur" placeholder="留言给我们,你想说的写在这里!" style="height: 80px;" />
+						<textarea placeholder="留言给我们,你想说的写在这里!" style="height: 80px;" v-model:value="customer.notes" />
 					</view>
+				</view>
+				<view class="check-code uni-form-item">
+					<view class="title"><text class="uni-form-item__title">获取短信验证:</text></view>
+					<uni-row class="demo-uni-row" :width="nvueWidth">
+						<uni-col :span="16" style="height: 40px;">
+							<uni-section title="去除空格" subTitle="使用 trim 属性 ,可以控制返回内容的空格 " type="line" padding>
+								<uni-easyinput class="uni-mt-5" trim="all" placeholder="请输入验证码"
+									@input="input"></uni-easyinput>
+							</uni-section>
+						</uni-col>
+						<uni-col :span="6" :offset="2">
+							<button type="primary" plain="true" size="mini" style="margin-top: 1px">GET</button>
+						</uni-col>
+					</uni-row>
+
+
+
 				</view>
 				<view class="btn-yy">
 					<button type="primary" @click="sendForm">提交</button>
@@ -83,6 +100,11 @@
 </template>
 
 <script>
+	import {
+		addRecord,
+		getServerType
+	} from '@/api/index.js'
+
 	export default {
 		data() {
 			return {
@@ -92,7 +114,6 @@
 				showClearIcon: false,
 				changeValue: '',
 				showPassword: true,
-				candidates: ['美白', '去皱', '紧致', '提亮', '常规检测'],
 				start: '',
 				end: '',
 				check_data: {
@@ -108,25 +129,35 @@
 					serverTypeError: '请选择预约服务类型!',
 					timeError: '请勾选预约时间!',
 				},
+				serverTypeList: [],
 				customer: {
-					name: '',
-					phone: '',
-					serverType: '',
-					startTime: '',
-					endTime: ''
+					userName: '',
+					userPhone: '',
+					typeName: '',
+					reservationStartTime: '',
+					reservationEndTime: '',
+					notes: ''
 				},
 				type: 'success',
 				message: '预约信息已提交,请耐心等待确认! 即将返回首页'
 			}
 		},
-		mounted() {
+		async mounted() {
 			var time = new Date()
 			this.start = new Date()
 			this.end = new Date(time.setDate(time.getDate() + 7))
+			let serverTypeList = await getServerType();
+			if (serverTypeList.statusCode === 200) {
+				console.log('请求成功! ', serverTypeList.data);
+				this.serverTypeList = serverTypeList.data.data;
+
+			} else {
+				console.log('请求失败! ', serverTypeList.statusCode);
+			}
+			// console.log('123', this.candidates);
 		},
 		watch: {
-
-			'customer.name'(newValue, oldValue) {
+			'customer.userName'(newValue, oldValue) {
 				if (newValue === '') {
 					this.check_data.name_is_null = true
 					return
@@ -134,7 +165,7 @@
 				this.check_data.name_is_null = false
 			},
 
-			'customer.phone'(newValue, oldValue) {
+			'customer.userPhone'(newValue, oldValue) {
 				if (newValue === '') {
 					this.check_data.phone_is_null = true
 					this.errMsg.phoneError = '电话号码不能为空!'
@@ -149,7 +180,7 @@
 				this.check_data.phone_is_null = false
 			},
 
-			'customer.serverType'(newValue, oldValue) {
+			'customer.typeName'(newValue, oldValue) {
 				if (newValue === '') {
 					this.check_data.serverType_is_null = true
 					return
@@ -158,14 +189,14 @@
 			},
 
 
-			'customer.startTime'(newValue, oldValue) {
+			'customer.reservationStartTime'(newValue, oldValue) {
 				if (newValue === '') {
 					this.check_data.startTime_is_null = true
 					return
 				}
 				this.check_data.startTime_is_null = false
 			},
-			'customer.endTime'(newValue, oldValue) {
+			'customer.reservationEndTime'(newValue, oldValue) {
 				if (newValue === '') {
 					this.check_data.endTime_is_null = true
 					return
@@ -174,39 +205,62 @@
 			},
 		},
 		methods: {
-			sendForm(e) {
+			async sendForm(e) {
 				let flag = false;
-				if (this.check_data.name_is_null || this.customer.name === '') {
+				if (this.check_data.name_is_null || this.customer.userName === '') {
 					flag = true
 				}
-				if (this.check_data.phone_is_null || this.customer.phone === '') {
+				if (this.check_data.phone_is_null || this.customer.userPhone === '') {
 					flag = true
 				}
-				if (this.check_data.serverType_is_null || this.customer.serverType === '') {
+				if (this.check_data.serverType_is_null || this.customer.typeName === '') {
 					flag = true
 				}
-				if (this.check_data.startTime_is_null || this.customer.startTime === '') {
+				if (this.check_data.startTime_is_null || this.customer.reservationStartTime === '') {
 					flag = true
 				}
-				if (this.check_data.endTime_is_null || this.customer.endTime === '') {
+				if (this.check_data.endTime_is_null || this.customer.reservationEndTime === '') {
 					flag = true
 				}
-				
+
 				if (flag) {
 					// TODO 消息提醒用户信息不完整
 					this.type = 'error';
 					this.message = '预约信息不完整,请重新填写提交! '
 					this.$refs.popup.open()
 					return
-				} 
+				}
+
 				// 提交表单信息
-				this.$refs.popup.open()
-				setTimeout(function (){
-					wx.navigateBack({
-						delta: 1
-					})
-				}, 1500);
+				console.log('提交预约信息', this.customer);
+				const add = await addRecord(this.customer);
+
+				if (add.statusCode === 200) {
+					console.log('请求成功! ', add.data);
+					this.type = 'success';
+					this.message = '预约信息提交成功,即将跳转回首页! '
+					this.$refs.popup.open()
+					setTimeout(function() {
+						wx.navigateBack({
+							delta: 1
+						})
+					}, 1500);
+				} else {
+					console.log('请求失败! ', add.statusCode);
+					this.type = 'error';
+					this.message = '信息提交失败,请稍后重试! '
+					this.$refs.popup.open()
+				}
 			}
+		},
+		computed: {
+			candidates() {
+				let list = new Array();
+				for (var i = 0; i < this.serverTypeList.length; i++) {
+					list.push(this.serverTypeList[i].typeName)
+				}
+				return list;
+			},
 		}
 	}
 </script>
@@ -279,5 +333,10 @@
 
 	.error-text {
 		color: #f56c6c;
+	}
+
+	.demo-uni-row {
+		display: flex;
+		align-items: center;
 	}
 </style>

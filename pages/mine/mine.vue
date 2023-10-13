@@ -16,10 +16,10 @@
 					<view class="txt">
 						<view class="name">
 							<view class="h3">
-								用户昵称
+								{{memberInfo.memberName}}
 							</view>
 							<view class="phone">
-								178****6589
+								{{memberInfo.memberPhone}}
 							</view>
 						</view>
 					</view>
@@ -66,15 +66,30 @@
 
 <script>
 	import {toPath} from '@/service/index.js'
+	import {getMemberInfo} from '@/api/index.js'
 	
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				memberInfo: ''
 			}
 		},
 		onLoad() {
 
+		},
+		async mounted(){
+			const memberInfoRes = await getMemberInfo({
+				openId: '123123'
+			}) 
+			// 请求成功
+			if (memberInfoRes.statusCode === 200) {
+				console.log('请求成功! ', memberInfoRes.data);
+				this.memberInfo = memberInfoRes.data.data;
+			
+			} else {
+				console.log('请求失败! ', memberInfoRes.statusCode);
+			}
+			
 		},
 		methods: {
 			toRecord() {

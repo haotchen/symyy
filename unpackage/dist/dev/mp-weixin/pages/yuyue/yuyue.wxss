@@ -55,4 +55,8 @@
 .error-text.data-v-2aa79262 {
 	color: #f56c6c;
 }
+.demo-uni-row.data-v-2aa79262 {
+	display: flex;
+	align-items: center;
+}
 

@@ -5,10 +5,10 @@
 	align-items: center;
 	justify-content: center;
 	width: 90%;
-	margin: 10px auto;
+	margin: 20px auto;
 	border: 1px solid #ddd;
 	text-align: center;
-	height: 94vh;
+	height: 90vh;
 	border-radius: 10px;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: relative;

@@ -1,1 +1,1 @@
-<view class="form-box"><view class="about-title">暂无关于我们的描述 ~~</view></view>
+<view class="form-box"><view class="about-title">{{''+aboutValue+''}}</view></view>

@@ -6,31 +6,52 @@
 			</view>
 			<form>
 				<view class="uni-textarea">
-					<textarea placeholder="点我填写!" :maxlength="300" v-model:value="textValue" />
+					<textarea placeholder="点我填写!" :maxlength="300" v-model:value="body.textValue" />
 				</view>
 				<view class="tishi">
 					当前输入文字数量: {{textValueLength}}
 				</view>
-				<button class="feedback-btn" type="primary">提交反馈</button>
+				<button class="feedback-btn" type="primary" @click="saveFeedBack">提交反馈</button>
 			</form>
 		</view>
+		<uni-popup ref="popup" type="message">
+			<uni-popup-message :type="type" :message="message" :duration="2000"></uni-popup-message>
+		</uni-popup>
 	</view>
 </template>
 
 <script>
+	import {addFeedBack} from '@/api/index.js'
 	export default {
 		data() {
 			return {
-				textValue: ''
-				
+				type: '',
+				message: '',
+				body: {
+					textValue: '',
+					memberId: '123'
+				}
 			}
 		},
 		methods: {
-
+			async saveFeedBack(){
+				const feedBackRes = await addFeedBack(this.body)
+				// 请求成功
+				if (feedBackRes.statusCode === 200) {
+					console.log('请求成功! ', feedBackRes.data);
+					this.type = 'success'
+					this.message = '您的反馈提交成功了!'
+				} else {
+					console.log('请求失败! ', feedBackRes.statusCode);
+					this.type = 'error'
+					this.message = '您的反馈提交失败了,请稍后重试!'
+				}
+				
+			}
 		},
 		computed: {
 			'textValueLength' () {
-				return this.textValue.length
+				return this.body.textValue.length
 			}
 		}
 	}
@@ -43,10 +64,10 @@
 		align-items: center;
 		justify-content: center;
 		width: 90%;
-		margin: 10px auto;
+		margin: 20px auto;
 		border: 1px solid #ddd;
 		text-align: center;
-		height: 94vh;
+		height: 90vh;
 		border-radius: 10px;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 		position: relative;
