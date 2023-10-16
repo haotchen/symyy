@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/myRecord/myRecord",
     "pages/feedback/feedback",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/personal/personal"
   ],
   "subPackages": [],
   "window": {

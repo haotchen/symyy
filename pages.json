@@ -49,7 +49,16 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		{
+		    "path" : "pages/personal/personal",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

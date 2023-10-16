@@ -7,10 +7,10 @@
 				</view>
 				
 			</view>
-			<view class="fot-xh">
-				<navigator url="" hover-class="none">
+			<view class="fot-xh" >
+				<navigator url="" hover-class="none" @click="toPersonal">
 					<view class="pic">
-						<image src="../../static/cy-my/pic-m1.png" style="width: 130rpx;" mode="widthFix">
+						<image :src="memberInfo.avatar" style="width: 130rpx;" mode="widthFix">
 						</image>
 					</view>
 					<view class="txt">
@@ -71,7 +71,11 @@
 	export default {
 		data() {
 			return {
-				memberInfo: ''
+				memberInfo: {
+					avatar: "../../static/cy-my/pic-m1.png",
+					memberName: "",
+					memberPhone: ""
+				}
 			}
 		},
 		onLoad() {
@@ -83,12 +87,11 @@
 			// 请求成功
 			if (memberInfoRes.statusCode === 200) {
 				console.log('请求成功! ', memberInfoRes.data);
-				this.memberInfo = memberInfoRes.data.data;
-			
+				this.memberInfo.memberName = memberInfoRes.data.data.memberName;
+				this.memberInfo.memberPhone = memberInfoRes.data.data.memberPhone;
 			} else {
 				console.log('请求失败! ', memberInfoRes.statusCode);
 			}
-			
 		},
 		methods: {
 			toRecord() {
@@ -99,6 +102,9 @@
 			},
 			toAbout(){
 				toPath('/pages/about/about')
+			},
+			toPersonal() {
+				toPath('/pages/personal/personal')
 			}
 		}
 	}
