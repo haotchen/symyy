@@ -1,1 +1,1 @@
-<view class="form-box"><view class="about-title">{{''+aboutValue+''}}</view></view>
+<view class="form-box"><navigation style="height:44px;" vue-id="1cea7424-1" bind:__l="__l"></navigation><view class="about-title">{{''+aboutValue+''}}</view></view>

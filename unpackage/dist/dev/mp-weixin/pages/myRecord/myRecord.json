@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "navigation": "/components/navigation/navigation",
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card"
   }
 }

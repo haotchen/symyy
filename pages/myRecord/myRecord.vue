@@ -1,5 +1,6 @@
 <template>
 	<view class="record-content">
+		<navigation style="height: 44px;"></navigation>
 		<view class="my-record-title">
 			我的预约记录
 		</view>
@@ -18,6 +19,7 @@
 	import {
 		getMyRecord
 	} from '@/api/index.js'
+	import navigation from "@/components/navigation/navigation"
 	export default {
 		data() {
 			return {

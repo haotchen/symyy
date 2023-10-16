@@ -19,12 +19,12 @@
 	width: 100%;
 }
 .swiper {
-	height: 300rpx;
+	height: 400rpx;
 }
 .swiper-item {
 	display: block;
-	height: 300rpx;
-	line-height: 300rpx;
+	height: 400rpx;
+	line-height: 400rpx;
 	text-align: center;
 }
 .swiper-list {
@@ -55,13 +55,13 @@
 .bgi-title {
 	position: fixed;
 	top: 0px;
-	height: 300rpx;
+	height: 400rpx;
 	z-index: 2;
 	background-color: #fff;
 	padding-bottom: 50rpx;
 }
 .scroll-Y {
-	margin-top: 350rpx;
+	margin-top: 20rpx;
 	/* flex: auto; */
 	/* height: 100vh; */
 	padding-bottom: 150rpx;

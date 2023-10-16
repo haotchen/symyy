@@ -1,5 +1,6 @@
 <template>
 	<view class="header">
+		<navigation style="height: 44px;"></navigation>
 		<view class="uesr">
 			<view class="top-xh">
 				<view class="h2">
@@ -67,7 +68,7 @@
 <script>
 	import {toPath} from '@/service/index.js'
 	import {getMemberInfo} from '@/api/index.js'
-	
+	import navigation from "@/components/navigation/navigation"
 	export default {
 		data() {
 			return {
@@ -82,7 +83,7 @@
 
 		},
 		async mounted(){
-			let openId = wx.getStorageSync('openid')
+			let openId = uni.getStorageSync('openid')
 			const memberInfoRes = await getMemberInfo({ openId }) 
 			// 请求成功
 			if (memberInfoRes.statusCode === 200) {

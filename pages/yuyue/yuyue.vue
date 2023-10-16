@@ -1,6 +1,6 @@
 <template>
 	<view class="form-box">
-
+		<navigation style="height: 44px;"></navigation>
 		<view class="title-text">
 			<uni-icons type="contact" size="30"></uni-icons>
 			提交您的预约信息
@@ -106,7 +106,7 @@
 		getServerType,
 		getSmsCode
 	} from '@/api/index.js'
-
+	import navigation from "@/components/navigation/navigation"
 	export default {
 		data() {
 			return {
@@ -155,7 +155,7 @@
 			let serverTypeList = await getServerType();
 			if (serverTypeList.statusCode === 200) {
 				this.serverTypeList = serverTypeList.data.data;
-			} 
+			}
 
 			// console.log('123', this.candidates);
 		},
@@ -225,8 +225,8 @@
 				}
 				return true
 			},
-			inputSmsCode(e){
-				this.customer.smsCode = e 
+			inputSmsCode(e) {
+				this.customer.smsCode = e
 			},
 			async sendForm(e) {
 				let openid = wx.getStorageSync('openid')
@@ -268,7 +268,7 @@
 					this.message = '预约信息提交成功,即将跳转回首页! '
 					this.$refs.popup.open()
 					setTimeout(function() {
-						wx.navigateBack({
+						uni.navigateBack({
 							delta: 1
 						})
 					}, 1500);

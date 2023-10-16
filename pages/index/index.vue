@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
-		<view class="uni-margin-wrap bgi-title">
+		<!-- <navigation style="height: 44px;"></navigation> -->
+		<view class="uni-margin-wrap">
 			<swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
 				:duration="duration">
 				<swiper-item v-for="(item,index) in background" :key="index">
@@ -45,6 +46,7 @@
 		getIndexImgs,
 		getOpenId
 	} from '@/api/index.js'
+
 	export default {
 		data() {
 			return {
@@ -165,13 +167,13 @@
 	}
 
 	.swiper {
-		height: 300rpx;
+		height: 400rpx;
 	}
 
 	.swiper-item {
 		display: block;
-		height: 300rpx;
-		line-height: 300rpx;
+		height: 400rpx;
+		line-height: 400rpx;
 		text-align: center;
 	}
 
@@ -207,14 +209,14 @@
 	.bgi-title {
 		position: fixed;
 		top: 0px;
-		height: 300rpx;
+		height: 400rpx;
 		z-index: 2;
 		background-color: #fff;
 		padding-bottom: 50rpx;
 	}
 
 	.scroll-Y {
-		margin-top: 350rpx;
+		margin-top: 20rpx;
 		/* flex: auto; */
 		/* height: 100vh; */
 		padding-bottom: 150rpx;

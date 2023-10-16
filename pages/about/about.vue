@@ -1,5 +1,6 @@
 <template>
 	<view class="form-box">
+		<navigation style="height: 44px;"></navigation>
 		<view class="about-title">
 			{{ aboutValue }}
 		</view>
@@ -10,6 +11,7 @@
 	import {
 		getAboutInfo
 	} from '@/api/index.js'
+	import navigation from "@/components/navigation/navigation"
 	export default {
 		data() {
 			return {
