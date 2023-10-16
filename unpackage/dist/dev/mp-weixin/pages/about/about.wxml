@@ -1,1 +1,0 @@
-<view class="form-box"><view class="about-title">{{''+aboutValue+''}}</view></view>

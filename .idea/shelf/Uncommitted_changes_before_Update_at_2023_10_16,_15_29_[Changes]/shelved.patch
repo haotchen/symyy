@@ -1,0 +1,18 @@
+Index: unpackage/dist/dev/mp-weixin/pages/personal/personal.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"navigationBarTitleText\": \"\",\n  \"enablePullDownRefresh\": false\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/unpackage/dist/dev/mp-weixin/pages/personal/personal.json b/unpackage/dist/dev/mp-weixin/pages/personal/personal.json
+--- a/unpackage/dist/dev/mp-weixin/pages/personal/personal.json	(revision 928fb2e8892764422fd11f3982a9a95b686f2797)
++++ b/unpackage/dist/dev/mp-weixin/pages/personal/personal.json	(date 1697441313708)
+@@ -1,4 +1,5 @@
+ {
+   "navigationBarTitleText": "",
+-  "enablePullDownRefresh": false
++  "enablePullDownRefresh": false,
++  "usingComponents": {}
+ }
+\ No newline at end of file
