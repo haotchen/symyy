@@ -85,9 +85,9 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 /***/ }),
 
 /***/ 114:
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
-  \***********************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -112,9 +112,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ 115:
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
-  \**********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
+  \*****************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.SUN, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -123,9 +123,9 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\"
 /***/ }),
 
 /***/ 116:
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
-  \***************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
+  \**********************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -134,9 +134,9 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\
 /***/ }),
 
 /***/ 117:
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
-  \***************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
+  \**********************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -145,9 +145,9 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 /***/ }),
 
 /***/ 118:
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
-  \*****************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -754,9 +754,9 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 /***/ }),
 
 /***/ 161:
-/*!**********************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-popup/components/uni-popup/popup.js ***!
-  \**********************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-popup/components/uni-popup/popup.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -836,9 +836,9 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 /***/ }),
 
 /***/ 183:
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
-  \******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2499,7 +2499,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -9542,7 +9542,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9563,14 +9563,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9666,7 +9666,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -10086,9 +10086,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 26:
-/*!*****************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/pages.json ***!
-  \*****************************************************/
+/*!************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/pages.json ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10127,229 +10127,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 32:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    if(typeof renderjs.beforeCreate === 'function'){
-			renderjs.beforeCreate = [renderjs.beforeCreate]
-		}
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 33:
-/*!*******************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/api/index.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.addFeedBack = addFeedBack;
-exports.addRecord = addRecord;
-exports.getAboutInfo = getAboutInfo;
-exports.getDoctorInfo = getDoctorInfo;
-exports.getIndexImgs = getIndexImgs;
-exports.getMemberInfo = getMemberInfo;
-exports.getMyRecord = getMyRecord;
-exports.getOpenId = getOpenId;
-exports.getServerType = getServerType;
-exports.getStudioInfo = getStudioInfo;
-var _index = __webpack_require__(/*! @/service/index.js */ 34);
-var baseUrlDev = 'https://localhost:11000';
-// const baseUrlPublic = 'https://www.haotchen.top:11000'
-var baseUrlPublic = 'https://192.168.1.181:11000';
-// 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-var flag = 'public';
-// let flag = 'dev';
-
-var getBaseUrl = function getBaseUrl(uri) {
-  if (flag === 'dev') {
-    return baseUrlDev + uri;
-  }
-  if (flag === 'public') {
-    return baseUrlPublic + uri;
-  }
-};
-
-// 获取工作室信息
-function getStudioInfo() {
-  return (0, _index.toGet)(getBaseUrl('/studio/info'), null, null);
-}
-// 获取医生信息
-function getDoctorInfo() {
-  return (0, _index.toGet)(getBaseUrl('/doctor/info'), null, null);
-}
-// 获取服务类别信息
-function getServerType() {
-  return (0, _index.toGet)(getBaseUrl('/serverType/list'), null, null);
-}
-// 获取OpenId
-function getOpenId(data) {
-  return (0, _index.toGet)(getBaseUrl('/members/open'), data, null);
-}
-// 新增预约
-function addRecord(data) {
-  return (0, _index.toPost)(getBaseUrl('/reservationInfo/add'), data, {
-    'Content-type': 'application/json'
-  });
-}
-// 获取首页轮播
-function getIndexImgs() {
-  return (0, _index.toGet)(getBaseUrl('/studio/index/imgs'), null, null);
-}
-// 获取用户信息
-function getMemberInfo(data) {
-  return (0, _index.toGet)(getBaseUrl('/members/getMember'), data, null);
-}
-// 获取我的预约记录
-function getMyRecord(data) {
-  return (0, _index.toGet)(getBaseUrl('/reservationInfo/my'), data, null);
-}
-// 获取关于我们
-function getAboutInfo() {
-  return (0, _index.toGet)(getBaseUrl('/about/info'), null, null);
-}
-// 新增反馈
-function addFeedBack(data) {
-  return (0, _index.toPost)(getBaseUrl('/feedBack/add'), data, {
-    'Content-type': 'application/json'
-  });
-}
-
-/***/ }),
-
-/***/ 34:
-/*!***********************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/service/index.js ***!
-  \***********************************************************/
+/***/ 30:
+/*!******************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/service/index.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10364,9 +10145,9 @@ exports.openid = openid;
 exports.toGet = toGet;
 exports.toPath = void 0;
 exports.toPost = toPost;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 35));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 37));
-var _index = __webpack_require__(/*! @/api/index.js */ 33);
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 31));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 33));
+var _index = __webpack_require__(/*! @/api/index.js */ 34);
 // 跳转到指定路径
 var toPath = function toPath(path) {
   wx.navigateTo({
@@ -10428,7 +10209,7 @@ function _sendReq() {
 
 /***/ }),
 
-/***/ 35:
+/***/ 31:
 /*!************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/@babel/runtime/regenerator/index.js ***!
   \************************************************************************************************/
@@ -10437,12 +10218,12 @@ function _sendReq() {
 
 // TODO(Babel 8): Remove this file.
 
-var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 36)();
+var runtime = __webpack_require__(/*! @babel/runtime/helpers/regeneratorRuntime */ 32)();
 module.exports = runtime;
 
 /***/ }),
 
-/***/ 36:
+/***/ 32:
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
   \*******************************************************************/
@@ -10764,7 +10545,7 @@ module.exports = _regeneratorRuntime, module.exports.__esModule = true, module.e
 
 /***/ }),
 
-/***/ 37:
+/***/ 33:
 /*!*****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
   \*****************************************************************/
@@ -10805,10 +10586,234 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 
+/***/ 34:
+/*!**************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/api/index.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.addFeedBack = addFeedBack;
+exports.addRecord = addRecord;
+exports.getAboutInfo = getAboutInfo;
+exports.getDoctorInfo = getDoctorInfo;
+exports.getIndexImgs = getIndexImgs;
+exports.getMemberInfo = getMemberInfo;
+exports.getMyRecord = getMyRecord;
+exports.getOpenId = getOpenId;
+exports.getServerType = getServerType;
+exports.getSmsCode = getSmsCode;
+exports.getStudioInfo = getStudioInfo;
+var _index = __webpack_require__(/*! @/service/index.js */ 30);
+var baseUrlDev = 'https://localhost:11000';
+var baseUrlPublic = 'https://www.haotchen.top:11000';
+// const baseUrlPublic = 'https://192.168.1.181:11000'
+// 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
+var flag = 'dev';
+// let flag = 'dev';
+
+var getBaseUrl = function getBaseUrl(uri) {
+  if (flag === 'dev') {
+    return baseUrlDev + uri;
+  }
+  if (flag === 'public') {
+    return baseUrlPublic + uri;
+  }
+};
+
+// 获取工作室信息
+function getStudioInfo() {
+  return (0, _index.toGet)(getBaseUrl('/studio/info'), null, null);
+}
+// 获取医生信息
+function getDoctorInfo() {
+  return (0, _index.toGet)(getBaseUrl('/doctor/info'), null, null);
+}
+// 获取服务类别信息
+function getServerType() {
+  return (0, _index.toGet)(getBaseUrl('/serverType/list'), null, null);
+}
+// 获取OpenId
+function getOpenId(data) {
+  return (0, _index.toGet)(getBaseUrl('/members/open'), data, null);
+}
+// 新增预约
+function addRecord(data) {
+  return (0, _index.toPost)(getBaseUrl('/reservationInfo/add'), data, {
+    'Content-type': 'application/json'
+  });
+}
+// 获取首页轮播
+function getIndexImgs() {
+  return (0, _index.toGet)(getBaseUrl('/studio/index/imgs'), null, null);
+}
+// 获取用户信息
+function getMemberInfo(data) {
+  return (0, _index.toGet)(getBaseUrl('/members/getMember'), data, null);
+}
+// 获取我的预约记录
+function getMyRecord(data) {
+  return (0, _index.toGet)(getBaseUrl('/reservationInfo/my'), data, null);
+}
+// 获取关于我们
+function getAboutInfo() {
+  return (0, _index.toGet)(getBaseUrl('/about/info'), null, null);
+}
+// 请求发送短信验证码校验
+function getSmsCode(data) {
+  return (0, _index.toGet)(getBaseUrl('/reservationInfo/smsCode'), data, null);
+}
+// 新增反馈
+function addFeedBack(data) {
+  return (0, _index.toPost)(getBaseUrl('/feedBack/add'), data, {
+    'Content-type': 'application/json'
+  });
+}
+
+/***/ }),
+
+/***/ 37:
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    if(typeof renderjs.beforeCreate === 'function'){
+			renderjs.beforeCreate = [renderjs.beforeCreate]
+		}
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
 /***/ 38:
-/*!*******************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni.promisify.adaptor.js ***!
-  \*******************************************************************/
+/*!**************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni.promisify.adaptor.js ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10956,9 +10961,9 @@ module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exp
 /***/ }),
 
 /***/ 99:
-/*!**********************************************************************************************!*\
-  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-icons/components/uni-icons/icons.js ***!
-  \**********************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -4,10 +4,10 @@ import {
 } from '@/service/index.js'
 
 const baseUrlDev = 'https://localhost:11000'
-// const baseUrlPublic = 'https://www.haotchen.top:11000'
-const baseUrlPublic = 'https://192.168.1.181:11000'
+const baseUrlPublic = 'https://www.haotchen.top:11000'
+// const baseUrlPublic = 'https://192.168.1.181:11000'
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-let flag = 'public';
+let flag = 'dev';
 // let flag = 'dev';
 
 var getBaseUrl = function(uri){
@@ -57,6 +57,10 @@ export function getMyRecord(data) {
 // 获取关于我们
 export function getAboutInfo() {
 	return toGet(getBaseUrl('/about/info'), null, null)
+}
+// 请求发送短信验证码校验
+export function getSmsCode(data) {
+	return toGet(getBaseUrl('/reservationInfo/smsCode'), data, null)
 }
 // 新增反馈
 export function addFeedBack(data) {

@@ -62,16 +62,17 @@
 					</view>
 				</view>
 				<view class="check-code uni-form-item">
-					<view class="title"><text class="uni-form-item__title">获取短信验证:</text></view>
+					<view class="title"><text class="uni-form-item__title">短信验证:</text></view>
 					<uni-row class="demo-uni-row" :width="nvueWidth">
 						<uni-col :span="16" style="height: 40px;">
 							<uni-section title="去除空格" subTitle="使用 trim 属性 ,可以控制返回内容的空格 " type="line" padding>
 								<uni-easyinput class="uni-mt-5" trim="all" placeholder="请输入验证码"
-									@input="input"></uni-easyinput>
+									@input="inputSmsCode"></uni-easyinput>
 							</uni-section>
 						</uni-col>
 						<uni-col :span="6" :offset="2">
-							<button type="primary" plain="true" size="mini" style="margin-top: 1px">GET</button>
+							<button type="primary" plain="true" size="mini" @click="smsCode"
+								style="margin-top: 1px">{{smsSecond !== 0 ? smsSecond + '秒' : '获取'}}</button>
 						</uni-col>
 					</uni-row>
 
@@ -102,7 +103,8 @@
 <script>
 	import {
 		addRecord,
-		getServerType
+		getServerType,
+		getSmsCode
 	} from '@/api/index.js'
 
 	export default {
@@ -136,10 +138,14 @@
 					typeName: '',
 					reservationStartTime: '',
 					reservationEndTime: '',
-					notes: ''
+					notes: '',
+					smsCode: ''
 				},
 				type: 'success',
-				message: '预约信息已提交,请耐心等待确认! 即将返回首页'
+				message: '预约信息已提交,请耐心等待确认! 即将返回首页',
+				smsCodeSecond: 0,
+				timer: '',
+				smsCodeSecondStatus: true
 			}
 		},
 		async mounted() {
@@ -154,7 +160,7 @@
 			} else {
 				console.log('请求失败! ', serverTypeList.statusCode);
 			}
-			
+
 			// console.log('123', this.candidates);
 		},
 		watch: {
@@ -206,22 +212,47 @@
 			},
 		},
 		methods: {
+			checkUserPhone() {
+				const phoneRegex = /^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|19[0-9])\d{8}$/;
+
+				if (this.customer.userPhone.length !== 11) {
+					this.type = 'error';
+					this.message = '电话号码未填写,请检查! '
+					this.$refs.popup.open()
+					return false
+				}
+				if (!phoneRegex.test(this.customer.userPhone)) {
+					this.type = 'error';
+					this.message = '电话号码不合法,请检查! '
+					this.$refs.popup.open()
+					return false
+				}
+				return true
+			},
+			inputSmsCode(e){
+				this.customer.smsCode = e 
+			},
 			async sendForm(e) {
 				let openid = wx.getStorageSync('openid')
 				let flag = false;
 				if (this.check_data.name_is_null || this.customer.userName === '') {
+					console.log('1');
 					flag = true
 				}
 				if (this.check_data.phone_is_null || this.customer.userPhone === '') {
+					console.log('2');
 					flag = true
 				}
 				if (this.check_data.serverType_is_null || this.customer.typeName === '') {
+					console.log('3');
 					flag = true
 				}
 				if (this.check_data.startTime_is_null || this.customer.reservationStartTime === '') {
+					console.log('4');
 					flag = true
 				}
 				if (this.check_data.endTime_is_null || this.customer.reservationEndTime === '') {
+					console.log('5');
 					flag = true
 				}
 				this.customer.miniId = openid
@@ -253,7 +284,44 @@
 					this.message = '信息提交失败,请稍后重试! '
 					this.$refs.popup.open()
 				}
+			},
+			startCountdown() {
+				this.smsCodeSecond = 60; // 重置倒计时的秒数
+				clearInterval(this.timer); // 清除之前的计时器
+				var that = this;
+				// 更新倒计时的秒数，并在页面显示
+				that.timer = setInterval(function() {
+					that.smsCodeSecond--;
+					console.log(that.smsCodeSecond);
+					if (that.smsCodeSecond === 0) {
+						clearInterval(that.timer)
+						that.smsCodeSecondStatus = true
+					}
+				}, 1000); // 每隔一秒执行一次
+			},
+			async smsCode() {
+				// 校验表单手机号是否填写
+				if (!this.checkUserPhone()) {
+					return
+				}
+				if (this.smsCodeSecondStatus) {
+					this.smsCodeSecondStatus = false
+					this.startCountdown()
+					let openid = wx.getStorageSync('openid');
+					console.log(openid);
+					await getSmsCode({
+						openId: openid,
+						phone: this.customer.userPhone
+					}).then((res) => {}).catch((err) => {
+						console.log(err);
+					});
+				} else {
+					return
+				}
+
 			}
+
+
 		},
 		computed: {
 			candidates() {
@@ -263,6 +331,9 @@
 				}
 				return list;
 			},
+			smsSecond() {
+				return this.smsCodeSecond
+			}
 		}
 	}
 </script>
