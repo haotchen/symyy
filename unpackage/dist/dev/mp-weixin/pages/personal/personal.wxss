@@ -1,0 +1,17 @@
+
+.page {
+	margin-top: 10px;
+}
+.avatar-wrapper {
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.avatar {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	z-index: 9;
+}
+
