@@ -58,10 +58,10 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
-/***/ 100:
-/*!*****************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-icons/components/uni-icons/icons.js ***!
-  \*****************************************************************************************/
+/***/ 107:
+/*!**********************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1106,10 +1106,27 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 115:
-/*!******************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
-  \******************************************************************************************************************/
+/***/ 12:
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/toPropertyKey.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
+var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ 14);
+function _toPropertyKey(arg) {
+  var key = toPrimitive(arg, "string");
+  return _typeof(key) === "symbol" ? key : String(key);
+}
+module.exports = _toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 122:
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/index.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1121,9 +1138,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 116));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 117));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 118));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 123));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 124));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 125));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -1133,10 +1150,10 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 116:
-/*!*****************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
-  \*****************************************************************************************************************/
+/***/ 123:
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/en.json ***!
+  \**********************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.SUN, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -1144,10 +1161,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"select date\"
 
 /***/ }),
 
-/***/ 117:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
-  \**********************************************************************************************************************/
+/***/ 124:
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hans.json ***!
+  \***************************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -1155,10 +1172,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"选择日期\
 
 /***/ }),
 
-/***/ 118:
-/*!**********************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
-  \**********************************************************************************************************************/
+/***/ 125:
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/i18n/zh-Hant.json ***!
+  \***************************************************************************************************************************/
 /*! exports provided: uni-datetime-picker.selectDate, uni-datetime-picker.selectTime, uni-datetime-picker.selectDateTime, uni-datetime-picker.startDate, uni-datetime-picker.endDate, uni-datetime-picker.startTime, uni-datetime-picker.endTime, uni-datetime-picker.ok, uni-datetime-picker.clear, uni-datetime-picker.cancel, uni-datetime-picker.year, uni-datetime-picker.month, uni-calender.SUN, uni-calender.MON, uni-calender.TUE, uni-calender.WED, uni-calender.THU, uni-calender.FRI, uni-calender.SAT, uni-calender.confirm, default */
 /***/ (function(module) {
 
@@ -1166,10 +1183,10 @@ module.exports = JSON.parse("{\"uni-datetime-picker.selectDate\":\"選擇日期\
 
 /***/ }),
 
-/***/ 119:
-/*!************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
-  \************************************************************************************************************/
+/***/ 126:
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-datetime-picker/components/uni-datetime-picker/util.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1670,23 +1687,6 @@ function fixIosDateFormat(value) {
 
 /***/ }),
 
-/***/ 12:
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/toPropertyKey.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ 14);
-function _toPropertyKey(arg) {
-  var key = toPrimitive(arg, "string");
-  return _typeof(key) === "symbol" ? key : String(key);
-}
-module.exports = _toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
 /***/ 13:
 /*!*******************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
@@ -1775,10 +1775,10 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
-/***/ 162:
-/*!*****************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-popup/components/uni-popup/popup.js ***!
-  \*****************************************************************************************/
+/***/ 169:
+/*!**********************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-popup/components/uni-popup/popup.js ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1857,10 +1857,25 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
-/***/ 184:
-/*!*************************************************************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
-  \*************************************************************************************************************/
+/***/ 19:
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ 9);
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return arrayLikeToArray(arr);
+}
+module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 191:
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1989,21 +2004,6 @@ function createAnimation(option, _this) {
   return new MPAnimation(option, _this);
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-
-/***/ 19:
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ 9);
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
-}
-module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -3521,7 +3521,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -10564,7 +10564,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -10585,14 +10585,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -10688,7 +10688,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"symyy","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -11108,9 +11108,9 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 26:
-/*!************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/pages.json ***!
-  \************************************************/
+/*!*****************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/pages.json ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11150,9 +11150,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 30:
-/*!******************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/service/index.js ***!
-  \******************************************************/
+/*!***********************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/service/index.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11609,9 +11609,9 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /***/ }),
 
 /***/ 34:
-/*!**************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/api/index.js ***!
-  \**************************************************/
+/*!*******************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/api/index.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11637,7 +11637,7 @@ var baseUrlDev = 'https://localhost:11000';
 var baseUrlPublic = 'https://www.haotchen.top:11000';
 // const baseUrlPublic = 'https://192.168.1.181:11000'
 // 控制使用线上或线下服务器, dev 本地开发地址, public 线上开发地址
-var flag = 'dev';
+var flag = 'public';
 // let flag = 'dev';
 
 var getBaseUrl = function getBaseUrl(uri) {
@@ -11833,9 +11833,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 38:
-/*!**************************************************************!*\
-  !*** /Users/chenhaotian/code/symyy/uni.promisify.adaptor.js ***!
-  \**************************************************************/
+/*!*******************************************************************!*\
+  !*** C:/Users/86176/Desktop/symyy/symyy/uni.promisify.adaptor.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

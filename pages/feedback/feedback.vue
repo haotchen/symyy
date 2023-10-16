@@ -21,7 +21,8 @@
 </template>
 
 <script>
-	import {addFeedBack} from '@/api/index.js'
+	import {addFeedBack} from '@/api/index.js';
+	import { toPath } from "@/service/index.js"
 	export default {
 		data() {
 			return {
@@ -38,13 +39,21 @@
 				const feedBackRes = await addFeedBack(this.body)
 				// 请求成功
 				if (feedBackRes.statusCode === 200) {
-					console.log('请求成功! ', feedBackRes.data);
+					// console.log('请求成功! ', feedBackRes.data);
 					this.type = 'success'
 					this.message = '您的反馈提交成功了!'
+					this.$refs.popup.open()
+					setTimeout(()=>{
+						uni.switchTab({
+							url: "/pages/index/index"
+						})
+					},2000)
+					
 				} else {
 					console.log('请求失败! ', feedBackRes.statusCode);
 					this.type = 'error'
 					this.message = '您的反馈提交失败了,请稍后重试!'
+					this.$refs.popup.open()
 				}
 				
 			}

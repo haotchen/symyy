@@ -3,7 +3,7 @@
 	
 	export default {
 		onLaunch: function() {
-			if(!wx.getStorageSync('openid')){
+			if(!uni.getStorageSync('openid')){
 				// 执行获取openid存入缓存
 				openid()
 			}
