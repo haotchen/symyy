@@ -215,7 +215,11 @@ var _index2 = __webpack_require__(/*! @/api/index.js */ 34);
 var _default = {
   data: function data() {
     return {
-      memberInfo: ''
+      memberInfo: {
+        avatar: "../../static/cy-my/pic-m1.png",
+        memberName: "",
+        memberPhone: ""
+      }
     };
   },
   onLoad: function onLoad() {},
@@ -237,7 +241,8 @@ var _default = {
               // 请求成功
               if (memberInfoRes.statusCode === 200) {
                 console.log('请求成功! ', memberInfoRes.data);
-                _this.memberInfo = memberInfoRes.data.data;
+                _this.memberInfo.memberName = memberInfoRes.data.data.memberName;
+                _this.memberInfo.memberPhone = memberInfoRes.data.data.memberPhone;
               } else {
                 console.log('请求失败! ', memberInfoRes.statusCode);
               }
@@ -258,6 +263,9 @@ var _default = {
     },
     toAbout: function toAbout() {
       (0, _index.toPath)('/pages/about/about');
+    },
+    toPersonal: function toPersonal() {
+      (0, _index.toPath)('/pages/personal/personal');
     }
   }
 };
