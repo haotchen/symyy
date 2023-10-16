@@ -154,12 +154,8 @@
 			this.end = new Date(time.setDate(time.getDate() + 7))
 			let serverTypeList = await getServerType();
 			if (serverTypeList.statusCode === 200) {
-				console.log('请求成功! ', serverTypeList.data);
 				this.serverTypeList = serverTypeList.data.data;
-
-			} else {
-				console.log('请求失败! ', serverTypeList.statusCode);
-			}
+			} 
 
 			// console.log('123', this.candidates);
 		},
@@ -265,11 +261,9 @@
 				}
 
 				// 提交表单信息
-				console.log('提交预约信息', this.customer);
 				const add = await addRecord(this.customer);
 
 				if (add.statusCode === 200) {
-					console.log('请求成功! ', add.data);
 					this.type = 'success';
 					this.message = '预约信息提交成功,即将跳转回首页! '
 					this.$refs.popup.open()
@@ -279,7 +273,6 @@
 						})
 					}, 1500);
 				} else {
-					console.log('请求失败! ', add.statusCode);
 					this.type = 'error';
 					this.message = '信息提交失败,请稍后重试! '
 					this.$refs.popup.open()
@@ -292,7 +285,6 @@
 				// 更新倒计时的秒数，并在页面显示
 				that.timer = setInterval(function() {
 					that.smsCodeSecond--;
-					console.log(that.smsCodeSecond);
 					if (that.smsCodeSecond === 0) {
 						clearInterval(that.timer)
 						that.smsCodeSecondStatus = true
@@ -308,7 +300,6 @@
 					this.smsCodeSecondStatus = false
 					this.startCountdown()
 					let openid = wx.getStorageSync('openid');
-					console.log(openid);
 					await getSmsCode({
 						openId: openid,
 						phone: this.customer.userPhone

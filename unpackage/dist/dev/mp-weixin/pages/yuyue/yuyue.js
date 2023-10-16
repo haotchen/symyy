@@ -101,31 +101,31 @@ var components
 try {
   components = {
     uniIcons: function () {
-      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 95))
+      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 102))
     },
     uniCombox: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-combox/components/uni-combox/uni-combox */ "uni_modules/uni-combox/components/uni-combox/uni-combox").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-combox/components/uni-combox/uni-combox.vue */ 103))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-combox/components/uni-combox/uni-combox */ "uni_modules/uni-combox/components/uni-combox/uni-combox").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-combox/components/uni-combox/uni-combox.vue */ 110))
     },
     uniDatetimePicker: function () {
-      return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 110))
+      return Promise.all(/*! import() | uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker.vue */ 117))
     },
     uniRow: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 122))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 129))
     },
     uniCol: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 129))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 136))
     },
     uniEasyinput: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 136))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 143))
     },
     uniSteps: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-steps/components/uni-steps/uni-steps */ "uni_modules/uni-steps/components/uni-steps/uni-steps").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-steps/components/uni-steps/uni-steps.vue */ 143))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-steps/components/uni-steps/uni-steps */ "uni_modules/uni-steps/components/uni-steps/uni-steps").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-steps/components/uni-steps/uni-steps.vue */ 150))
     },
     uniPopup: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 150))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 157))
     },
     uniPopupMessage: function () {
-      return Promise.all(/*! import() | uni_modules/uni-popup/components/uni-popup-message/uni-popup-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-popup/components/uni-popup-message/uni-popup-message")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup-message/uni-popup-message.vue */ 157))
+      return Promise.all(/*! import() | uni_modules/uni-popup/components/uni-popup-message/uni-popup-message */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-popup/components/uni-popup-message/uni-popup-message")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup-message/uni-popup-message.vue */ 164))
     },
   }
 } catch (e) {
@@ -351,10 +351,7 @@ var _default = {
             case 5:
               serverTypeList = _context.sent;
               if (serverTypeList.statusCode === 200) {
-                console.log('请求成功! ', serverTypeList.data);
                 _this.serverTypeList = serverTypeList.data.data;
-              } else {
-                console.log('请求失败! ', serverTypeList.statusCode);
               }
 
               // console.log('123', this.candidates);
@@ -471,14 +468,11 @@ var _default = {
                 _this2.$refs.popup.open();
                 return _context2.abrupt("return");
               case 13:
-                // 提交表单信息
-                console.log('提交预约信息', _this2.customer);
-                _context2.next = 16;
+                _context2.next = 15;
                 return (0, _index.addRecord)(_this2.customer);
-              case 16:
+              case 15:
                 add = _context2.sent;
                 if (add.statusCode === 200) {
-                  console.log('请求成功! ', add.data);
                   _this2.type = 'success';
                   _this2.message = '预约信息提交成功,即将跳转回首页! ';
                   _this2.$refs.popup.open();
@@ -488,12 +482,11 @@ var _default = {
                     });
                   }, 1500);
                 } else {
-                  console.log('请求失败! ', add.statusCode);
                   _this2.type = 'error';
                   _this2.message = '信息提交失败,请稍后重试! ';
                   _this2.$refs.popup.open();
                 }
-              case 18:
+              case 17:
               case "end":
                 return _context2.stop();
             }
@@ -508,7 +501,6 @@ var _default = {
       // 更新倒计时的秒数，并在页面显示
       that.timer = setInterval(function () {
         that.smsCodeSecond--;
-        console.log(that.smsCodeSecond);
         if (that.smsCodeSecond === 0) {
           clearInterval(that.timer);
           that.smsCodeSecondStatus = true;
@@ -530,26 +522,25 @@ var _default = {
                 return _context3.abrupt("return");
               case 2:
                 if (!_this3.smsCodeSecondStatus) {
-                  _context3.next = 11;
+                  _context3.next = 10;
                   break;
                 }
                 _this3.smsCodeSecondStatus = false;
                 _this3.startCountdown();
                 openid = wx.getStorageSync('openid');
-                console.log(openid);
-                _context3.next = 9;
+                _context3.next = 8;
                 return (0, _index.getSmsCode)({
                   openId: openid,
                   phone: _this3.customer.userPhone
                 }).then(function (res) {}).catch(function (err) {
                   console.log(err);
                 });
-              case 9:
-                _context3.next = 12;
+              case 8:
+                _context3.next = 11;
                 break;
-              case 11:
+              case 10:
                 return _context3.abrupt("return");
-              case 12:
+              case 11:
               case "end":
                 return _context3.stop();
             }
