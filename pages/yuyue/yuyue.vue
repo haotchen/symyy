@@ -1,6 +1,5 @@
 <template>
 	<view class="form-box">
-		<navigation style="height: 44px;"></navigation>
 		<view class="title-text">
 			<uni-icons type="contact" size="30"></uni-icons>
 			提交您的预约信息
@@ -106,7 +105,7 @@
 		getServerType,
 		getSmsCode
 	} from '@/api/index.js'
-	import navigation from "@/components/navigation/navigation"
+	
 	export default {
 		data() {
 			return {

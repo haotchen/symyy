@@ -1,6 +1,5 @@
 <template>
 	<view class="content">
-		<!-- <navigation style="height: 44px;"></navigation> -->
 		<view class="uni-margin-wrap">
 			<swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
 				:duration="duration">
@@ -46,7 +45,7 @@
 		getIndexImgs,
 		getOpenId
 	} from '@/api/index.js'
-
+	
 	export default {
 		data() {
 			return {
@@ -68,10 +67,7 @@
 				openId: ''
 			}
 		},
-		onLoad() {
-
-		},
-		async mounted() {
+		async onLoad() {
 			const studioInfoRes = await getStudioInfo();
 			// 请求成功
 			if (studioInfoRes.statusCode === 200) {

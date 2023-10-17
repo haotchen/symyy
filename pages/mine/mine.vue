@@ -1,6 +1,5 @@
 <template>
 	<view class="header">
-		<navigation style="height: 44px;"></navigation>
 		<view class="uesr">
 			<view class="top-xh">
 				<view class="h2">
@@ -68,7 +67,7 @@
 <script>
 	import {toPath} from '@/service/index.js'
 	import {getMemberInfo} from '@/api/index.js'
-	import navigation from "@/components/navigation/navigation"
+	
 	export default {
 		data() {
 			return {

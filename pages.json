@@ -11,8 +11,9 @@
             "path" : "pages/yuyue/yuyue",
             "style" :                                                                                    
             {
-                // "navigationBarTitleText": "",
-                // "enablePullDownRefresh": false
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
             }
         },
 		{
@@ -64,8 +65,8 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "预约",
 		"navigationBarBackgroundColor": "#a8c1ff",
-		"backgroundColor": "#F8F8F8",
-		"navigationStyle": "custom"
+		"backgroundColor": "#F8F8F8"
+		// "navigationStyle": "custom"
 	},
 	// 配置tabbar导航栏
 	"tabBar": {

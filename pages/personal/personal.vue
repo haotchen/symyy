@@ -1,6 +1,5 @@
 <template>
 	<view class="page">
-		<navigation style="height: 44px;"></navigation>
 		<button class="avatar-wrapper" open-type="chooseAvatar" @chooseavatar="onChooseAvatar">
 			<img class="avatar" :src="avatarUrl" mode="widthFix"></img>
 		</button>
@@ -18,7 +17,7 @@
 	import {
 		getMemberInfo
 	} from '@/api/index.js'
-	import navigation from "@/components/navigation/navigation"
+	
 	export default {
 		data() {
 			return {

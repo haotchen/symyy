@@ -1,6 +1,5 @@
 <template>
 	<view class="form-box">
-		<navigation style="height: 44px;"></navigation>
 		<view class="form-data">
 			<view class="feedback-title">
 				意见反馈给我们,为您提供更好的服务!
@@ -24,7 +23,7 @@
 <script>
 	import {addFeedBack} from '@/api/index.js';
 	import { toPath } from "@/service/index.js"
-	import navigation from "@/components/navigation/navigation"
+	
 	export default {
 		data() {
 			return {
